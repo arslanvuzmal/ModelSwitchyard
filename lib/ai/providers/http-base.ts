@@ -2,6 +2,7 @@ import { buildNormalisedError, categoriseHttpStatus, categoriseThrown } from '..
 import { estimateTokens } from '../tokens';
 import type { Capability, NormalisedError, ProviderContext } from '../types';
 import { ProviderError } from '../types';
+import { validateBaseUrl, safeResolveHostname } from '@/lib/security/ssrf';
 
 /**
  * Shared HTTP plumbing for credential-backed providers.
@@ -35,6 +36,84 @@ function parseRetryAfter(header: string | null): number | undefined {
   if (Number.isFinite(date)) return Math.max(0, date - Date.now());
 
   return undefined;
+}
+
+/**
+ * Validates and resolves a custom base URL with SSRF protection.
+ * Called once per provider connection before making requests.
+ */
+export async function validateAndResolveBaseUrl(baseUrl: string): Promise<string> {
+  const validation = validateBaseUrl(baseUrl);
+  await safeResolveHostname(validation.hostname);
+  return baseUrl;
+}
+
+/**
+ * Creates a safe fetch wrapper for a validated base URL.
+ * Handles timeouts, redirects, and response size limits.
+ */
+export function createProviderFetch(baseUrl: string, context: ProviderContext) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), context.timeoutMs);
+
+  return {
+    async postJson(path: string, headers: Record<string, string>, body: unknown) {
+      const url = `${baseUrl.replace(/\/+$/, '')}${path}`;
+      const startedAt = Date.now();
+
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', ...headers },
+          body: JSON.stringify(body),
+          signal: controller.signal,
+          redirect: 'manual',
+        });
+
+        const latencyMs = Date.now() - startedAt;
+
+        if (!response.ok) {
+          throw new ProviderError(
+            buildNormalisedError(categoriseHttpStatus(response.status), {
+              statusCode: response.status,
+              retryAfterMs: parseRetryAfter(response.headers.get('retry-after')),
+            }),
+          );
+        }
+
+        let json: unknown;
+        try {
+          json = await response.json();
+        } catch {
+          throw new ProviderError(
+            buildNormalisedError('MALFORMED_RESPONSE', {
+              message: 'The provider returned a body that was not valid JSON.',
+            }),
+          );
+        }
+
+        return {
+          json,
+          latencyMs,
+          providerRequestId:
+            response.headers.get('x-request-id') ?? response.headers.get('request-id'),
+        };
+      } catch (error) {
+        if (error instanceof ProviderError) throw error;
+
+        throw new ProviderError(
+          buildNormalisedError(categoriseThrown(error), {
+            message:
+              categoriseThrown(error) === 'TIMEOUT'
+                ? `The provider did not respond within ${context.timeoutMs} ms.`
+                : 'A network fault prevented the request from completing.',
+          }),
+        );
+      } finally {
+        clearTimeout(timer);
+      }
+    },
+  };
 }
 
 export async function postJson(options: HttpCallOptions): Promise<HttpCallResult> {

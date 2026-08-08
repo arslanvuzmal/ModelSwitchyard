@@ -118,6 +118,9 @@ export interface RouteExplanation {
   fallbackOrder: string[];
 
   evaluatedAt: string;
+
+  // Index signature for JSONB compatibility
+  [key: string]: unknown;
 }
 
 /** Requirements a candidate must satisfy to remain eligible. */

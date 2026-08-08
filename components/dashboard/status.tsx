@@ -61,6 +61,7 @@ export const ERROR_LABELS: Record<ErrorCategory, string> = {
   NETWORK: 'Network',
   QUOTA_EXCEEDED: 'Quota exceeded',
   UNKNOWN: 'Unknown',
+  CLIENT_CANCELLED: 'Client cancelled',
 };
 
 export function ErrorBadge({ category }: { category: ErrorCategory }) {

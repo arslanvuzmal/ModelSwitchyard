@@ -21,6 +21,7 @@ import type {
  *  - One usage record: only the succeeding attempt contributes billable usage.
  *  - One client response: the first success returns immediately.
  *  - Non-retryable failures stop the chain rather than walking it pointlessly.
+ *  - Cancellation: respects AbortSignal to stop spending on client disconnect.
  */
 
 export interface AttemptRecord {
@@ -60,6 +61,8 @@ export interface ExecuteOptions {
   classify: (candidate: RouteCandidate, error: unknown) => NormalisedError;
   /** Resolves per-candidate call context (credential, base URL, demo faults). */
   buildContext: (candidate: RouteCandidate, timeoutMs: number) => ProviderContext;
+  /** Optional AbortSignal for cancellation (e.g., client disconnect). */
+  abortSignal?: AbortSignal;
   sleep?: (ms: number) => Promise<void>;
   now?: () => number;
   random?: () => number;
@@ -82,6 +85,7 @@ export async function executeWithFallback(
   const sleep = options.sleep ?? defaultSleep;
   const now = options.now ?? Date.now;
   const random = options.random ?? Math.random;
+  const abortSignal = options.abortSignal;
 
   const startedAt = now();
   const attempts: AttemptRecord[] = [];
@@ -92,132 +96,171 @@ export async function executeWithFallback(
 
   const deadline = startedAt + options.totalTimeoutMs;
 
-  while (candidateIndex < options.chain.length) {
-    const candidate = options.chain[candidateIndex];
-    if (!candidate) break;
+  // Check for immediate abort
+  if (abortSignal?.aborted) {
+    return {
+      response: null,
+      attempts: [],
+      finalError: {
+        category: 'CLIENT_CANCELLED',
+        message: 'Request was cancelled by the client.',
+        retryable: false,
+      },
+      fallbackUsed: false,
+      totalLatencyMs: 0,
+    };
+  }
 
-    const isFirstCandidate = candidateIndex === 0;
-    const policyForPrevious = finalError ? retryPolicyFor(finalError.category) : null;
+  // Set up abort listener
+  let abortHandler: (() => void) | null = null;
+  if (abortSignal) {
+    abortHandler = () => {};
+    abortSignal.addEventListener('abort', abortHandler);
+  }
 
-    // A non-retryable, non-fallbackable failure ends the chain immediately.
-    if (policyForPrevious && !policyForPrevious.allowFallback) {
-      break;
-    }
-
-    let retriesUsed = 0;
-
-    // Inner loop: the same candidate may be retried when its policy allows it.
-    for (;;) {
-      if (attempts.length >= options.maxAttempts) {
-        finalError = finalError ?? {
-          category: 'UNKNOWN',
-          message: `The attempt limit of ${options.maxAttempts} was reached.`,
-          retryable: false,
-        };
-        return finish();
-      }
-
-      const remaining = deadline - now();
-      if (remaining <= 0) {
+  try {
+    while (candidateIndex < options.chain.length) {
+      // Check for abort before each attempt
+      if (abortSignal?.aborted) {
         finalError = {
-          category: 'TIMEOUT',
-          message: `The overall timeout of ${options.totalTimeoutMs} ms was reached before a provider responded.`,
+          category: 'CLIENT_CANCELLED',
+          message: 'Request was cancelled by the client.',
           retryable: false,
         };
-        return finish();
+        break;
       }
 
-      sequence += 1;
-      const attemptStartedAt = new Date(now());
-      const timeoutMs = Math.min(options.attemptTimeoutMs, remaining);
-      const context = options.buildContext(candidate, timeoutMs);
+      const candidate = options.chain[candidateIndex];
+      if (!candidate) break;
 
-      const reason = describeReason(isFirstCandidate, retriesUsed, sequence);
+      const isFirstCandidate = candidateIndex === 0;
+      const policyForPrevious = finalError ? retryPolicyFor(finalError.category) : null;
 
-      try {
-        const response = await options.invoke(candidate, options.request, context);
+      // A non-retryable, non-fallbackable failure ends the chain immediately.
+      if (policyForPrevious && !policyForPrevious.allowFallback) {
+        break;
+      }
 
-        const cost = estimateCost(response.usage, {
-          inputPricePerMillion: candidate.inputPricePerMillion,
-          outputPricePerMillion: candidate.outputPricePerMillion,
-        });
+      let retriesUsed = 0;
 
-        attempts.push({
-          sequence,
-          modelId: candidate.modelId,
-          modelLabel: candidate.modelLabel,
-          providerKind: candidate.providerKind,
-          status: 'SUCCEEDED',
-          errorCategory: null,
-          errorMessage: null,
-          inputTokens: response.usage.inputTokens,
-          outputTokens: response.usage.outputTokens,
-          estimatedCost: cost,
-          latencyMs: response.latencyMs,
-          providerRequestId: response.providerRequestId,
-          reason,
-          startedAt: attemptStartedAt,
-          completedAt: new Date(now()),
-        });
-
-        return {
-          response: { ...response, estimatedCost: cost },
-          attempts,
-          finalError: null,
-          fallbackUsed: candidateIndex > 0,
-          totalLatencyMs: now() - startedAt,
-        };
-      } catch (error) {
-        const normalised = options.classify(candidate, error);
-        finalError = normalised;
-
-        attempts.push({
-          sequence,
-          modelId: candidate.modelId,
-          modelLabel: candidate.modelLabel,
-          providerKind: candidate.providerKind,
-          status:
-            normalised.category === 'TIMEOUT'
-              ? ('TIMED_OUT' as AttemptStatus)
-              : ('FAILED' as AttemptStatus),
-          errorCategory: normalised.category,
-          errorMessage: normalised.message,
-          inputTokens: 0,
-          outputTokens: 0,
-          estimatedCost: 0,
-          latencyMs: now() - attemptStartedAt.getTime(),
-          providerRequestId: null,
-          reason,
-          startedAt: attemptStartedAt,
-          completedAt: new Date(now()),
-        });
-
-        const policy = retryPolicyFor(normalised.category);
-
-        // Retry the same target only while its policy permits it.
-        if (policy.retrySameTarget && retriesUsed < policy.maxRetries) {
-          retriesUsed += 1;
-
-          const delay =
-            normalised.retryAfterMs ??
-            backoffDelayMs(normalised.category, retriesUsed, random);
-
-          if (delay > 0) await sleep(Math.min(delay, Math.max(0, deadline - now())));
-          continue;
-        }
-
-        if (!policy.allowFallback) {
+      // Inner loop: the same candidate may be retried when its policy allows it.
+      for (;;) {
+        if (attempts.length >= options.maxAttempts) {
+          finalError = finalError ?? {
+            category: 'UNKNOWN',
+            message: `The attempt limit of ${options.maxAttempts} was reached.`,
+            retryable: false,
+          };
           return finish();
         }
 
-        break; // Move to the next candidate.
+        const remaining = deadline - now();
+        if (remaining <= 0) {
+          finalError = {
+            category: 'TIMEOUT',
+            message: `The overall timeout of ${options.totalTimeoutMs} ms was reached before a provider responded.`,
+            retryable: false,
+          };
+          return finish();
+        }
+
+        sequence += 1;
+        const attemptStartedAt = new Date(now());
+        const timeoutMs = Math.min(options.attemptTimeoutMs, remaining);
+        const context = options.buildContext(candidate, timeoutMs);
+
+        const reason = describeReason(isFirstCandidate, retriesUsed, sequence);
+
+        try {
+          const response = await options.invoke(candidate, options.request, context);
+
+          const cost = estimateCost(response.usage, {
+            inputPricePerMillion: candidate.inputPricePerMillion,
+            outputPricePerMillion: candidate.outputPricePerMillion,
+          });
+
+          attempts.push({
+            sequence,
+            modelId: candidate.modelId,
+            modelLabel: candidate.modelLabel,
+            providerKind: candidate.providerKind,
+            status: 'SUCCEEDED',
+            errorCategory: null,
+            errorMessage: null,
+            inputTokens: response.usage.inputTokens,
+            outputTokens: response.usage.outputTokens,
+            estimatedCost: cost,
+            latencyMs: response.latencyMs,
+            providerRequestId: response.providerRequestId,
+            reason,
+            startedAt: attemptStartedAt,
+            completedAt: new Date(now()),
+          });
+
+          return {
+            response: { ...response, estimatedCost: cost },
+            attempts,
+            finalError: null,
+            fallbackUsed: candidateIndex > 0,
+            totalLatencyMs: now() - startedAt,
+          };
+        } catch (error) {
+          const normalised = options.classify(candidate, error);
+          finalError = normalised;
+
+          attempts.push({
+            sequence,
+            modelId: candidate.modelId,
+            modelLabel: candidate.modelLabel,
+            providerKind: candidate.providerKind,
+            status:
+              normalised.category === 'TIMEOUT'
+                ? ('TIMED_OUT' as AttemptStatus)
+                : ('FAILED' as AttemptStatus),
+            errorCategory: normalised.category,
+            errorMessage: normalised.message,
+            inputTokens: 0,
+            outputTokens: 0,
+            estimatedCost: 0,
+            latencyMs: now() - attemptStartedAt.getTime(),
+            providerRequestId: null,
+            reason,
+            startedAt: attemptStartedAt,
+            completedAt: new Date(now()),
+          });
+
+          const policy = retryPolicyFor(normalised.category);
+
+          // Retry the same target only while its policy permits it.
+          if (policy.retrySameTarget && retriesUsed < policy.maxRetries) {
+            retriesUsed += 1;
+
+            const delay =
+              normalised.retryAfterMs ??
+              backoffDelayMs(normalised.category, retriesUsed, random);
+
+            if (delay > 0) await sleep(Math.min(delay, Math.max(0, deadline - now())));
+            continue;
+          }
+
+          if (!policy.allowFallback) {
+            return finish();
+          }
+
+          break; // Move to the next candidate.
+        }
       }
+
+      candidateIndex += 1;
     }
 
-    candidateIndex += 1;
+    return finish();
+  } finally {
+    // Clean up abort listener
+    if (abortHandler && abortSignal) {
+      abortSignal.removeEventListener('abort', abortHandler);
+    }
   }
-
-  return finish();
 
   function finish(): ExecuteResult {
     return {

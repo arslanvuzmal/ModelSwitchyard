@@ -52,7 +52,7 @@ export default defineConfig({
           name: 'security',
           include: ['tests/security/**/*.test.ts'],
           environment: 'node',
-          setupFiles: ['tests/setup/database.ts'],
+          setupFiles: ['tests/setup/database.ts', 'tests/setup/security.ts'],
           fileParallelism: false,
           testTimeout: 30_000,
           hookTimeout: 60_000,

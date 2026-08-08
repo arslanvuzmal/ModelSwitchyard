@@ -1,6 +1,7 @@
 import type { ErrorCategory } from '@/lib/database/generated/enums';
 
 import type { NormalisedError } from './types';
+export type { NormalisedError } from './types';
 
 /**
  * Failure taxonomy and retry policy.
@@ -120,6 +121,13 @@ export const RETRY_POLICIES: Record<ErrorCategory, RetryPolicy> = {
     rationale:
       'An unclassified failure falls back once without retrying, so an unrecognised condition cannot cause repeated calls.',
   },
+  CLIENT_CANCELLED: {
+    retrySameTarget: false,
+    allowFallback: false,
+    maxRetries: 0,
+    backoffBaseMs: 0,
+    rationale: 'The client cancelled the request. No retry or fallback is attempted.',
+  },
 };
 
 export function retryPolicyFor(category: ErrorCategory): RetryPolicy {
@@ -166,6 +174,12 @@ export function categoriseThrown(error: unknown): ErrorCategory {
 
     if (name === 'aborterror' || message.includes('timeout')) return 'TIMEOUT';
     if (
+      name === 'aborterror' ||
+      message.includes('aborted') ||
+      message.includes('cancelled')
+    )
+      return 'CLIENT_CANCELLED';
+    if (
       message.includes('econnrefused') ||
       message.includes('enotfound') ||
       message.includes('socket') ||
@@ -198,6 +212,7 @@ export const SAFE_ERROR_MESSAGES: Record<ErrorCategory, string> = {
   NETWORK: 'A network fault prevented the request from completing.',
   QUOTA_EXCEEDED: 'A configured workspace quota has been exceeded.',
   UNKNOWN: 'The request failed for an unexpected reason.',
+  CLIENT_CANCELLED: 'The request was cancelled by the client.',
 };
 
 export function safeMessageFor(category: ErrorCategory): string {
@@ -223,6 +238,8 @@ export function httpStatusFor(category: ErrorCategory): number {
       return 502;
     case 'SAFETY_REFUSAL':
       return 200;
+    case 'CLIENT_CANCELLED':
+      return 499;
     default:
       return 500;
   }
