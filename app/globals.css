@@ -1,205 +1,721 @@
 @import 'tailwindcss';
 
-/**
- * OmniRouter design system.
- *
- * A deep charcoal base with a restrained cyan primary and a muted violet
- * secondary. Accent use is deliberately sparse: colour carries meaning
- * (success, warning, failure, fallback) rather than decoration, so a chart or a
- * trace can be read at a glance.
- */
-
 @theme {
-  /* Surfaces — a blue-black ramp rather than neutral grey. */
-  --color-base-950: #070a0f;
-  --color-base-900: #0b0f16;
-  --color-base-850: #10151e;
-  --color-base-800: #161c27;
-  --color-base-700: #1e2532;
-  --color-base-600: #2a3341;
-  --color-base-500: #3a4557;
+  /* Colors */
+  --color-background: #07090b;
+  --color-background-elevated: #0b0e12;
+  --color-background-card: #11151a;
+  --color-background-deep: #050709;
 
-  /* Text */
-  --color-ink-50: #f5f8fc;
-  --color-ink-200: #c3cddb;
-  --color-ink-400: #8b98ab;
-  --color-ink-600: #5c6778;
+  --color-text-primary: #f4f7fa;
+  --color-text-secondary: #98a2ae;
+  --color-text-muted: #6b7a8a;
+  --color-text-disabled: #4a5568;
 
-  /* Primary — cyan, used for selection and primary action only. */
-  --color-primary-300: #7ee3f5;
-  --color-primary-400: #38cee8;
-  --color-primary-500: #12b3d1;
-  --color-primary-600: #0d8fa8;
+  --color-accent-primary: #8b8cf8;
+  --color-accent-primary-dim: #8b8cf833;
+  --color-accent-primary-hover: #7a7be8;
 
-  /* Secondary — muted violet, used for policy and routing semantics. */
-  --color-accent-300: #b8a6f5;
-  --color-accent-400: #9179ea;
-  --color-accent-500: #7458d8;
+  --color-accent-route: #6db7e8;
+  --color-accent-route-dim: #6db7e833;
 
-  /* Status */
-  --color-success-400: #34d399;
-  --color-success-600: #0f9b6c;
-  --color-warning-400: #fbbf24;
-  --color-warning-600: #b8860f;
-  --color-danger-400: #fb7185;
-  --color-danger-600: #be3455;
+  --color-accent-rust: #d06a4a;
+  --color-accent-rust-dim: #d06a4a33;
+  --color-accent-rust-hover: #c05a3a;
 
-  --font-sans:
-    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
-    sans-serif;
-  --font-mono:
-    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --color-accent-amber: #d8a84e;
+  --color-accent-amber-dim: #d8a84e33;
 
-  --radius-panel: 0.75rem;
+  --color-accent-olive: #7ba57a;
+  --color-accent-olive-dim: #7ba57a33;
+
+  --color-border: #1e252e;
+  --color-border-strong: #29303a;
+  --color-border-focus: #8b8cf8;
+
+  --color-surface: #0b0e12;
+  --color-surface-hover: #11151a;
+  --color-surface-active: #1a1f2a;
+
+  /* Fonts */
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Breakpoints */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+
+  /* Spacing */
+  --space-container: 1.5rem;
+  --space-container-lg: 3rem;
+
+  /* Radius */
+  --radius-card: 0.75rem;
+  --radius-button: 0.5rem;
+
+  /* Shadows */
+  --shadow-card: 0 10px 40px -10px rgb(0 0 0 / 0.3);
+  --shadow-elevated: 0 20px 60px -15px rgb(0 0 0 / 0.4);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 300ms ease;
 }
 
-/* --------------------------------------------------------------------------
-   Base
-   -------------------------------------------------------------------------- */
-
-* {
-  border-color: var(--color-base-700);
+/* Custom utilities for component classes */
+@utility obsidian-card {
+  background-color: var(--color-background-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  transition: all var(--transition-normal);
+  &:hover {
+    border-color: var(--color-border-strong);
+    background-color: var(--color-background-card);
+  }
 }
 
-html {
-  color-scheme: dark;
+@utility obsidian-card-rust {
+  background-color: var(--color-background-elevated);
+  border: 1px solid var(--color-accent-rust);
+  opacity: 0.4;
+  border-radius: var(--radius-card);
+  &:hover {
+    border-color: var(--color-accent-rust);
+    opacity: 0.6;
+  }
 }
 
-body {
-  background-color: var(--color-base-950);
-  color: var(--color-ink-200);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+@utility surface-glow {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom right,
+      var(--color-accent-primary) 5%,
+      transparent,
+      var(--color-accent-route) 5%
+    );
+    pointer-events: none;
+  }
 }
 
-/* A faint technical grid; strictly decorative and never behind body copy. */
-.surface-grid {
+@utility surface-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(58, 69, 87, 0.14) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(58, 69, 87, 0.14) 1px, transparent 1px);
-  background-size: 56px 56px;
+    linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
 
-.surface-glow {
-  background:
-    radial-gradient(
-      ellipse 70% 55% at 50% -10%,
-      rgba(18, 179, 209, 0.14),
-      transparent 70%
-    ),
-    radial-gradient(ellipse 50% 45% at 85% 10%, rgba(116, 88, 216, 0.1), transparent 70%);
+@utility skip-link {
+  position: absolute;
+  top: -2.5rem;
+  left: 1.5rem;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 0.375rem;
+  transition: all var(--transition-fast);
+  &:focus {
+    top: 1.5rem;
+  }
 }
 
-/* --------------------------------------------------------------------------
-   Focus — visible and consistent, never removed
-   -------------------------------------------------------------------------- */
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-accent-primary);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-background);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all var(--transition-fast);
+  &:hover {
+    background-color: var(--color-accent-primary-hover);
+  }
+}
 
-:focus-visible {
-  outline: 2px solid var(--color-primary-400);
-  outline-offset: 2px;
+@utility btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+  &:hover {
+    background-color: var(--color-surface-hover);
+    border-color: var(--color-border-strong);
+  }
+}
+
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+  &:hover {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+  }
+}
+
+@utility btn-destructive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-accent-rust);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all var(--transition-fast);
+  &:hover {
+    background-color: var(--color-accent-rust-hover);
+  }
+}
+
+@utility badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 0.375rem;
+  border: 1px solid;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+@utility badge-neutral {
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+@utility badge-primary {
+  background-color: var(--color-accent-primary-dim);
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+  opacity: 0.3;
+}
+
+@utility badge-accent {
+  background-color: var(--color-accent-route-dim);
+  color: var(--color-accent-route);
+  border-color: var(--color-accent-route);
+  opacity: 0.3;
+}
+
+@utility badge-success {
+  background-color: var(--color-accent-olive-dim);
+  color: var(--color-accent-olive);
+  border-color: var(--color-accent-olive);
+  opacity: 0.3;
+}
+
+@utility badge-warning {
+  background-color: var(--color-accent-amber-dim);
+  color: var(--color-accent-amber);
+  border-color: var(--color-accent-amber);
+  opacity: 0.3;
+}
+
+@utility badge-danger {
+  background-color: var(--color-accent-rust-dim);
+  color: var(--color-accent-rust);
+  border-color: var(--color-accent-rust);
+  opacity: 0.3;
+}
+
+@utility tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.375rem;
+  border: 1px solid;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+@utility tag-rust {
+  background-color: var(--color-accent-rust-dim);
+  color: var(--color-accent-rust);
+  border-color: var(--color-accent-rust);
+  opacity: 0.3;
+}
+
+@utility tag-amber {
+  background-color: var(--color-accent-amber-dim);
+  color: var(--color-accent-amber);
+  border-color: var(--color-accent-amber);
+  opacity: 0.3;
+}
+
+@utility tag-indigo {
+  background-color: var(--color-accent-primary-dim);
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+  opacity: 0.3;
+}
+
+@utility tag-olive {
+  background-color: var(--color-accent-olive-dim);
+  color: var(--color-accent-olive);
+  border-color: var(--color-accent-olive);
+  opacity: 0.3;
+}
+
+@utility tag-open-source {
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+  font-size: 0.625rem;
+}
+
+@utility stat-card {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background-elevated);
+  opacity: 0.7;
+  padding: 1rem;
+}
+
+@utility stat-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+@utility stat-value {
+  margin-top: 0.375rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}
+
+@utility input-control {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background-card);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+  &:hover {
+    border-color: var(--color-border-strong);
+  }
+  &:focus {
+    border-color: var(--color-accent-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-primary-dim);
+  }
+}
+
+@utility panel {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background-elevated);
+  opacity: 0.7;
+  box-shadow: 0 10px 40px -10px rgb(0 0 0 / 0.3);
+}
+
+@utility panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 1.25rem;
+}
+
+@utility table-container {
+  overflow-x: auto;
+}
+
+@utility table {
+  width: 100%;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+@utility th {
+  padding: 0.625rem 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@utility td {
+  padding: 0.625rem 0.75rem;
+  vertical-align: middle;
+  color: var(--color-text-secondary);
+}
+
+@utility empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-card);
+  border: 1px dashed var(--color-border);
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+}
+
+@utility demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background-deep);
+  opacity: 0.8;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  &::before {
+    content: '';
+    height: 0.375rem;
+    width: 0.375rem;
+    border-radius: 9999px;
+    background-color: var(--color-accent-amber);
+  }
+}
+
+@utility route-line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-accent-primary),
+    transparent
+  );
+}
+
+@utility route-line-active {
+  background-color: var(--color-accent-primary);
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@utility status-dot {
+  position: relative;
+  display: flex;
+  height: 8px;
+  width: 8px;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    opacity: 0.75;
+  }
+}
+
+@utility status-healthy {
+  background-color: var(--color-accent-olive);
+}
+
+@utility status-degraded {
+  background-color: var(--color-accent-amber);
+}
+
+@utility status-unavailable {
+  background-color: var(--color-accent-rust);
+}
+
+@utility status-unknown {
+  background-color: var(--color-text-muted);
+}
+
+@utility skeleton {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: var(--color-background-card);
   border-radius: 0.25rem;
 }
 
-/* Skip link for keyboard users. */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  z-index: 100;
-}
-
-.skip-link:focus {
-  left: 1rem;
-  top: 1rem;
-  padding: 0.625rem 1rem;
-  background: var(--color-base-800);
-  color: var(--color-ink-50);
-  border: 1px solid var(--color-primary-500);
+@utility code-block {
+  overflow-x: auto;
   border-radius: 0.5rem;
+  background-color: var(--color-background-deep);
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.625;
+  color: var(--color-text-secondary);
 }
 
-/* --------------------------------------------------------------------------
-   Scrollbars
-   -------------------------------------------------------------------------- */
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+@utility divider {
+  border-top: 1px solid var(--color-border);
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-base-900);
+@utility divider-vertical {
+  border-left: 1px solid var(--color-border);
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-base-600);
-  border-radius: 5px;
+@utility tooltip-trigger {
+  position: relative;
+  display: inline-flex;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-base-500);
-}
-
-/* --------------------------------------------------------------------------
-   Motion — respect the user's preference
-   -------------------------------------------------------------------------- */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-@keyframes pulse-soft {
-  0%,
-  100% {
+@utility tooltip-content {
+  position: absolute;
+  z-index: 50;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-deep);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 40px -10px rgb(0 0 0 / 0.3);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  .tooltip-trigger:hover & {
     opacity: 1;
-  }
-  50% {
-    opacity: 0.45;
-  }
-}
-
-.animate-pulse-soft {
-  animation: pulse-soft 2s ease-in-out infinite;
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    visibility: visible;
+    transform: translateX(-50%) translateY(-1rem);
   }
 }
 
-.animate-slide-up {
-  animation: slide-up 0.25s ease-out;
+@layer base {
+  :root {
+    /* Portfolio-family dark base */
+    --background: #07090b;
+    --background-elevated: #0b0e12;
+    --background-card: #11151a;
+    --background-deep: #050709;
+
+    --text-primary: #f4f7fa;
+    --text-secondary: #98a2ae;
+    --text-muted: #6b7a8a;
+    --text-disabled: #4a5568;
+
+    /* Primary OmniRouter accent - controlled violet/indigo */
+    --accent-primary: #8b8cf8;
+    --accent-primary-dim: #8b8cf833;
+    --accent-primary-hover: #7a7be8;
+
+    /* Secondary route accent */
+    --accent-route: #6db7e8;
+    --accent-route-dim: #6db7e833;
+
+    /* Rust accent (from portfolio) */
+    --accent-rust: #d06a4a;
+    --accent-rust-dim: #d06a4a33;
+    --accent-rust-hover: #c05a3a;
+
+    /* Amber */
+    --accent-amber: #d8a84e;
+    --accent-amber-dim: #d8a84e33;
+
+    /* Olive */
+    --accent-olive: #7ba57a;
+    --accent-olive-dim: #7ba57a33;
+
+    /* Borders */
+    --border: #1e252e;
+    --border-strong: #29303a;
+    --border-focus: #8b8cf8;
+
+    /* Surface */
+    --surface: #0b0e12;
+    --surface-hover: #11151a;
+    --surface-active: #1a1f2a;
+
+    /* Focus ring */
+    --focus-ring: 0 0 0 2px #07090b, 0 0 0 4px #8b8cf8;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  ::selection {
+    background-color: var(--accent-rust);
+    color: var(--text-primary);
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: 4px;
+  }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    top: -2.5rem;
+    left: 1.5rem;
+    z-index: 50;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 0.375rem;
+    transition: all 150ms ease;
+    &:focus {
+      top: 1.5rem;
+    }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--border-focus);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
-/* --------------------------------------------------------------------------
-   Recharts overrides — the library's defaults are too light for this palette
-   -------------------------------------------------------------------------- */
-
-.recharts-cartesian-grid line {
-  stroke: var(--color-base-700);
-}
-
-.recharts-text {
-  fill: var(--color-ink-400);
-  font-size: 11px;
-}
-
-.recharts-default-tooltip {
-  background-color: var(--color-base-800) !important;
-  border: 1px solid var(--color-base-600) !important;
-  border-radius: 0.5rem !important;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
