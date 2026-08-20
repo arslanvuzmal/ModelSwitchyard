@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="390" viewBox="0 0 1280 390" role="img" aria-labelledby="title desc">
+  <title id="title">Anatomy of an OmniRouter routing decision</title>
+  <desc id="desc">Capabilities, context, health, success rate, latency, cost, and operator preference flow through eligibility and strategy evaluation into a primary target, fallback chain, and stored explanation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07101d"/><stop offset="1" stop-color="#0b1020"/></linearGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#334155" stroke-opacity=".14"/></pattern>
+    <style>.label{font:600 11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:1.5px}.body{font:13px ui-sans-serif,system-ui,sans-serif}.mono{font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}</style>
+  </defs>
+  <rect width="1280" height="390" rx="24" fill="url(#bg)"/><rect width="1280" height="390" rx="24" fill="url(#grid)"/><rect x="1" y="1" width="1278" height="388" rx="23" fill="none" stroke="#334155"/>
+  <g class="body">
+    <text x="48" y="52" class="label" fill="#67e8f9">ROUTING DECISION ANATOMY</text>
+    <text x="48" y="81" fill="#e2e8f0" font-size="18" font-weight="700">A route is an evaluated artefact, not a random provider choice.</text>
+
+    <g transform="translate(48 118)">
+      <rect width="250" height="218" rx="14" fill="#0b1324" stroke="#334155"/>
+      <text x="20" y="31" class="label" fill="#94a3b8">INPUT SIGNALS</text>
+      <text x="20" y="64" class="mono" fill="#cbd5e1">capabilities</text><text x="132" y="64" class="mono" fill="#cbd5e1">context</text>
+      <text x="20" y="91" class="mono" fill="#cbd5e1">availability</text><text x="132" y="91" class="mono" fill="#cbd5e1">health</text>
+      <text x="20" y="118" class="mono" fill="#cbd5e1">success rate</text><text x="132" y="118" class="mono" fill="#cbd5e1">latency</text>
+      <text x="20" y="145" class="mono" fill="#cbd5e1">projected cost</text>
+      <text x="20" y="172" class="mono" fill="#cbd5e1">priority + weight</text>
+      <path d="M20 190H230" stroke="#1e293b"/><text x="20" y="209" class="mono" fill="#64748b">resolved before evaluation</text>
+    </g>
+
+    <path d="M298 227H342" stroke="url(#route)" stroke-width="2"/>
+    <g transform="translate(342 157)"><rect width="150" height="140" rx="14" fill="#0f172a" stroke="#0e7490"/><text x="75" y="47" text-anchor="middle" class="label" fill="#cffafe">ELIGIBILITY</text><text x="75" y="77" text-anchor="middle" class="mono" fill="#94a3b8">filter first</text><text x="75" y="102" text-anchor="middle" class="mono" fill="#f87171">record rejects</text></g>
+    <path d="M492 227H536" stroke="url(#route)" stroke-width="2"/>
+    <g transform="translate(536 157)"><rect width="150" height="140" rx="14" fill="#0f172a" stroke="#4338ca"/><text x="75" y="47" text-anchor="middle" class="label" fill="#e0e7ff">STRATEGY</text><text x="75" y="77" text-anchor="middle" class="mono" fill="#94a3b8">order eligible</text><text x="75" y="102" text-anchor="middle" class="mono" fill="#a5b4fc">score if needed</text></g>
+    <path d="M686 227H730" stroke="url(#route)" stroke-width="2"/>
+
+    <g transform="translate(730 118)">
+      <rect width="210" height="96" rx="13" fill="#0f172a" stroke="#0e7490"/><text x="18" y="31" class="label" fill="#cffafe">PRIMARY</text><text x="18" y="60" class="mono" fill="#22d3ee">rank 01 · selected</text>
+      <rect y="122" width="210" height="96" rx="13" fill="#0f172a" stroke="#4338ca"/><text x="18" y="153" class="label" fill="#e0e7ff">FALLBACK CHAIN</text><text x="18" y="182" class="mono" fill="#818cf8">rank 02 → 03 → …</text>
+    </g>
+    <path d="M940 227H984" stroke="url(#route)" stroke-width="2"/>
+    <g transform="translate(984 118)">
+      <rect width="248" height="218" rx="14" fill="#0b1324" stroke="#334155"/>
+      <text x="20" y="31" class="label" fill="#67e8f9">STORED EXPLANATION</text>
+      <text x="20" y="65" class="mono" fill="#cbd5e1">selectedCandidate</text>
+      <text x="20" y="92" class="mono" fill="#cbd5e1">rejectedCandidates</text>
+      <text x="20" y="119" class="mono" fill="#cbd5e1">scoreBreakdown</text>
+      <text x="20" y="146" class="mono" fill="#cbd5e1">fallbackOrder</text>
+      <text x="20" y="173" class="mono" fill="#cbd5e1">reason</text>
+      <text x="20" y="200" class="mono" fill="#cbd5e1">evaluatedAt</text>
+    </g>
+  </g>
+</svg>
