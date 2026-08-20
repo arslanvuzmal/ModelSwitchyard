@@ -289,5 +289,647 @@ Candidates that pass filtering but rank below the winner are recorded as `not_se
 
 `disabled` Â· `unavailable` Â· `unhealthy` Â· `missing_capability` Â· `context_too_small` Â· `exceeds_cost_ceiling` Â· `not_selected` Â· `provider_excluded`
 
-`evaluateRoute` is pure and synchronous. Database reads and rolling signals hapë}z¶‰Ëkºwµç]¥¹œ…±±•È½‘”¸ğ½Ñø(€€€€ñÑİ¥‘Ñ ôˆÔÀ”ˆøñ¥µœÍÉŒô‰Á½ÉÑ™½±¥¼½ÍÉ••¹Í¡½ÑÌ¼ÀÔµÁ±…åÉ½Õ¹¹Á¹œˆ…±Ğô‰=µ¹¥I½ÕÑ•È…Ñ•İ…äÁ±…åÉ½Õ¹ˆ€¼øñ‰È€¼øñÍÑÉ½¹œù…Ñ•İ…äÁ±…åÉ½Õ¹ğ½ÍÑÉ½¹œøƒŠP•á•ÕÑ”Ñ¡É½Õ Ñ¡”Í…µ”…Ñ•İ…ä…¹‘•±¥‰•É…Ñ•±ä•á•É¥Í”±…ÍÍ¥™¥•‘•µ¼™…¥±ÕÉ•Ì¸ğ½Ñø(€€ğ½ÑÈø(€€ñÑÈø(€€€€ñÑİ¥‘Ñ ôˆÔÀ”ˆøñ¥µœÍÉŒô‰Á½ÉÑ™½±¥¼½ÍÉ••¹Í¡½ÑÌ¼ÀàµÉ•ÅÕ•ÍĞµ¥¹ÍÁ•Ñ½È¹Á¹œˆ…±Ğô‰=µ¹¥I½ÕÑ•ÈÉ•ÅÕ•ÍĞ¥¹ÍÁ•Ñ½Èˆ€¼øñ‰È€¼øñÍÑÉ½¹œùI•ÅÕ•ÍĞ•áÁ±½É•Èğ½ÍÑÉ½¹œøƒŠP™¥±Ñ•ÈÁ•ÉÍ¥ÍÑ••á•ÕÑ¥½¹Ì…¹½Á•¸Ñ¡”•Ù¥‘•¹”‰•¡¥¹…¸½ÕÑ½µ”¸ğ½Ñø(€€€€ñÑİ¥‘Ñ ôˆÔÀ”ˆøñ¥µœÍÉŒô‰Á½ÉÑ™½±¥¼½ÍÉ••¹Í¡½ÑÌ¼ÀäµÕÍ…”µ…¹…±åÑ¥Ì¹Á¹œˆ…±Ğô‰=µ¹¥I½ÕÑ•ÈÕÍ…”…¹…±åÑ¥Ìˆ€¼øñ‰È€¼øñÍÑÉ½¹œùUÍ…”…¹…±åÑ¥Ìğ½ÍÑÉ½¹œøƒŠP½ÉÉ•±…Ñ”ÑÉ…™™¥Œ°™…±±‰…¬°±…Ñ•¹ä°Ñ½­•¸°½ÍĞ°µ½‘•°°ÁÉ½Ù¥‘•È°…¹™…¥±ÕÉ”‘¥ÍÑÉ¥‰ÕÑ¥½¹Ì¸ğ½Ñø(€€ğ½ÑÈø(ğ½Ñ…‰±”ø()Q¡”½Ù•ÉÙ¥•ÜÍÉ••¹Í¡½Ğ…ĞÑ¡”Ñ½À…¹™…±±‰…¬ÑÉ…”¥¸Ñ¡”É•±¥…‰¥±¥ÑäÍ•Ñ¥½¸½µÁ±•Ñ”Ñ¡”Í¥àÍ•±•Ñ•ÁÉ½‘ÕĞÍÕÉ™…•Ìì…±°…É”•á¥ÍÑ¥¹œÉ•Á½Í¥Ñ½Éä…ÍÍ•ÑÌÉ…Ñ¡•ÈÑ¡…¸µ…¹Õ™…ÑÕÉ•ÍÉ••¹Ì¸((ŒŒA$((ŒŒŒ¡…Ğ½µÁ±•Ñ¥½¸()‰…Í )ÕÉ°€µ`A=MP¡ÑÑÁÌè¼½å½ÕÈµ‘•Á±½åµ•¹Ğ¹•á…µÁ±”½…Á¤½ØÄ½¡…Ğ½½µÁ±•Ñ¥½¹Ìp(€€µ €‰ÕÑ¡½É¥é…Ñ¥½¸è	•…É•È€‘=59%I=UQI}-dˆp(€€µ €‰½¹Ñ•¹ĞµQåÁ”è…ÁÁ±¥…Ñ¥½¸½©Í½¸ˆp(€€µ €‰%‘•µÁ½Ñ•¹äµ-•äèÑ¥­•Ğ´ĞàÈÄµÍÕµµ…Éäˆp(€€µ€ì(€€€€‰µ•ÍÍ…•Ìˆèl(€€€€€ì€‰É½±”ˆè€‰ÍåÍÑ•´ˆ°€‰½¹Ñ•¹Ğˆè€‰e½Ô…É”„½¹¥Í”ÍÕÁÁ½ÉĞ…ÍÍ¥ÍÑ…¹Ğ¸ˆô°(€€€€€ì€‰É½±”ˆè€‰ÕÍ•Èˆ°€‰½¹Ñ•¹Ğˆè€‰MÕµµ…É¥é”Ñ¡¥ÌÍÕÁÁ½ÉĞÑ¡É•…¸ˆô(€€€t°(€€€€‰µ…á}Ñ½­•¹Ìˆè€ĞÀÀ°(€€€€‰Ñ•µÁ•É…ÑÕÉ”ˆè€À¸È°(€€€€‰Á½±¥äˆè€‰	…±…¹•ÁÉ½‘ÕÑ¥½¸ˆ(€ôœ)€()Q¡”­•äµ…ä…±Í¼‰”ÍÕÁÁ±¥•…Ìàµ…Á¤µ­•å€¸µ½‘•±€Á¥¹Ì„µ½‘•°…¹Íİ¥Ñ¡•ÌÉ½ÕÑ¥¹œÑ¼59U1€ìÁ½±¥å€Í•±•ÑÌ…¸…Ñ¥Ù”Á½±¥ä¥¸Ñ¡”…ÕÑ¡•¹Ñ¥…Ñ•İ½É­ÍÁ…”¸É•ÍÁ½¹Í•}™½Éµ…Ñ€…•ÁÑÌì€‰ÑåÁ”ˆè€‰©Í½¹}Í¡•µ„ˆ°€‰©Í½¹}Í¡•µ„ˆèì€‰Í¡•µ„ˆèì€¸¸¸ôôõ€¸()©Í½¸)ì(€€‰¥ˆè€‰•ÄäÀÔàÀµ™ÀÄ´ĞÑ„Ì´å”ĞØµ•ˆÈÁ™”İ˜ĞÌÕ”ˆ°(€€‰½‰©•Ğˆè€‰¡…Ğ¹½µÁ±•Ñ¥½¸ˆ°(€€‰É•…Ñ•ˆè€ÄÜàÜÄàĞÀÀÀ°(€€‰µ½‘•°ˆè€‰…ÍÑÉ„µ™…ÍĞˆ°(€€‰¡½¥•Ìˆèl(€€€ì(€€€€€€‰¥¹‘•àˆè€À°(€€€€€€‰µ•ÍÍ…”ˆèì€‰É½±”ˆè€‰…ÍÍ¥ÍÑ…¹Ğˆ°€‰½¹Ñ•¹Ğˆè€‹Š˜ˆô°(€€€€€€‰™¥¹¥Í¡}É•…Í½¸ˆè€‰ÍÑ½Àˆ(€€€ô(€t°(€€‰ÕÍ…”ˆèì(€€€€‰ÁÉ½µÁÑ}Ñ½­•¹Ìˆè€ÄÀ°(€€€€‰½µÁ±•Ñ¥½¹}Ñ½­•¹Ìˆè€ØÌ°(€€€€‰Ñ½Ñ…±}Ñ½­•¹Ìˆè€ÜÌ(€ô°(€€‰½µ¹¥É½ÕÑ•Èˆèì(€€€€‰½ÉÉ•±…Ñ¥½¹}¥ˆè€‰•ÄäÀÔàÀµ™ÀÄ´ĞÑ„Ì´å”ĞØµ•ˆÈÁ™”İ˜ĞÌÕ”ˆ°(€€€€‰ÁÉ½Ù¥‘•Èˆè€‰5<ˆ°(€€€€‰™…±±‰…­}ÕÍ•ˆè™…±Í”°(€€€€‰…ÑÑ•µÁÑÌˆè€Ä°(€€€€‰•ÍÑ¥µ…Ñ•‘}½ÍĞˆè€À¸ÀÀÀÀÌä°(€€€€‰±…Ñ•¹å}µÌˆè€ÔĞÀ°(€€€€‰Á½±¥äˆè€‰	…±…¹•ÁÉ½‘ÕÑ¥½¸ˆ°(€€€€‰ÍÑÉ…Ñ•äˆè€‰	19ˆ°(€€€€‰É½ÕÑ¥¹}É•…Í½¸ˆè€‰ÍÑÉ„…ÍĞÍ½É•¡¥¡•ÍĞ……¥¹ÍĞÑ¡”½¹™¥ÕÉ•Í½É¥¹œÁ½±¥ä¸ˆ(€ô)ô)€()MÕ•ÍÌ…¹Á½ÍĞµ…ÕÑ¡•¹Ñ¥…Ñ¥½¸™…¥±ÕÉ”É•ÍÁ½¹Í•Ì…ÉÉäè()Ñ•áĞ)àµ½µ¹¥É½ÕÑ•Èµ½ÉÉ•±…Ñ¥½¸µ¥è€ñÕÕ¥ø)àµ½µ¹¥É½ÕÑ•Èµ™…±±‰…¬µÕÍ•è€ÑÉÕ”ğ™…±Í”)àµ½µ¹¥É½ÕÑ•Èµ…ÑÑ•µÁÑÌè€€€€€€€ñ½Õ¹Ğø)àµ½µ¹¥É½ÕÑ•ÈµÅÕ½Ñ„µİ…É¹¥¹œè€€ñ‘•Ñ…¥°ø€€€Œİ¡•¸…ÁÁ±¥…‰±”)€()Q¡•Í”½µ¹¥É½ÕÑ•É€¹…µ•Ì…É”Á…ÉĞ½˜Ñ¡”ÕÉÉ•¹ĞA$½¹ÑÉ…Ğ…¹…É”¥¹Ñ•¹Ñ¥½¹…±±äÁÉ•Í•ÉÙ•¸((ŒŒŒMÑÉ•…µ¥¹œ()A=MP€½…Á¤½ØÄ½¡…Ğ½½µÁ±•Ñ¥½¹Ì½ÍÑÉ•…µ€É•ÅÕ¥É•Ì€‰ÍÑÉ•…´ˆèÑÉÕ•€…¹É•ÑÕÉ¹ÌM•ÉÙ•ÈµM•¹ĞÙ•¹ÑÌ¸MÑÉ•…µ¥¹œ•µ¥ÑÌ¹½Éµ…±¥é•ì€‰‘•±Ñ„ˆ°€‰‘½¹”ˆõ€¡Õ¹­Ì…¹„Ñ•Éµ¥¹…°•Ù•¹Ğ°ÕÍ•ÌÑ¡”Í…µ”­•ä½Á½±¥ä½ÅÕ½Ñ„½É½ÕÑ¥¹œÁ…Ñ °Á•ÉÍ¥ÍÑÌ¥ÑÌ•á•ÕÑ¥½¸ÑÉ…”°…¹‘½•Ì¹½Ğ…•ÁĞ%‘•µÁ½Ñ•¹äµ-•å€¸()Õ±°½¹ÑÉ…ĞèmA$I•™•É•¹•t¡‘½Ì½A%}II9¹µ¤¸((ŒŒQ•¡¹¥…°ÍÁ•¥™¥…Ñ¥½¹Ì((ñ‘•Ñ…¥±Ì½Á•¸ø(ñÍÕµµ…ÉäøñÍÑÉ½¹œù…Ñ•İ…ä…¹É½ÕÑ¥¹œğ½ÍÑÉ½¹œøğ½ÍÕµµ…Éäø()ğÉ•„ğMÁ•¥™¥…Ñ¥½¸ğ)ğ€´´´ğ€´´´ğ)ğA$ÍÑå±”ğ=Á•¹$µÍ¡…Á•¹½¸µÍÑÉ•…µ¥¹œÉ•ÍÁ½¹Í”Á±ÕÌ¹…µ•ÍÁ…•½µ¹¥É½ÕÑ•É€É½ÕÑ¥¹œµ•Ñ…‘…Ñ„ğ)ğI•ÅÕ•ÍĞÙ…±¥‘…Ñ¥½¸ği½ì€Ä5‘•±…É•‰½‘äì•áÁ±¥¥Ğ…ÉÉ…ä°ÍÑÉ¥¹œ°…¹•¹•É…Ñ¥½¸‰½Õ¹‘Ìğ)ğÕÑ¡•¹Ñ¥…Ñ¥½¸ğY¥ÉÑÕ…°­•äÑ¡É½Õ 	•…É•È½Èàµ…Á¤µ­•å€ìM!´ÈÔØ‘…Ñ…‰…Í”±½½­ÕÀğ)ğQ•¹…¹ĞÍ½Á”ğ]½É­ÍÁ…”½…ÁÁ±¥…Ñ¥½¸½•¹Ù¥É½¹µ•¹Ğ‘•É¥Ù•™É½´…ÕÑ¡•¹Ñ¥…Ñ•½¹Ñ•áĞğ)ğ%‘•µÁ½Ñ•¹äğ=ÁÑ¥½¹…°¹½¸µÍÑÉ•…µ¥¹œ%‘•µÁ½Ñ•¹äµ-•å€ì…Ğµµ½ÍĞµ½¹”±½½­ÕÀÁ•Èİ½É­ÍÁ…”ìÉ•Á±…ä€ĞÀå€ğ)ğMÑÉ•…µ¥¹œğ•‘¥…Ñ•MMÉ½ÕÑ”…Ğ€½…Á¤½ØÄ½¡…Ğ½½µÁ±•Ñ¥½¹Ì½ÍÑÉ•…µ€ì¥‘•µÁ½Ñ•¹ä¥Ì¥¹Ñ•¹Ñ¥½¹…±±äÉ•©•Ñ•½¸Ñ¡¥ÌÉ½ÕÑ”ğ)ğMÑÉ…Ñ•¥•Ìğ¥¡Ğèµ…¹Õ…°°ÁÉ¥½É¥Ñä°İ•¥¡Ñ•°½ÍĞ°±…Ñ•¹ä°É•±¥…‰¥±¥Ñä°…Á…‰¥±¥Ñä°‰…±…¹•ğ)ğ±¥¥‰¥±¥ÑäğÙ…¥±…‰¥±¥Ñä°Õ¹…Ù…¥±…‰±”¡•…±Ñ °ÁÉ½Ù¥‘•È•á±ÕÍ¥½¸°…Á…‰¥±¥Ñ¥•Ì°½¹Ñ•áĞ°ÁÉ½©•Ñ•µ½ÍĞ•¥±¥¹œğ)ğ1¥Ù”Í¥¹…±Ìğ!•…±Ñ ÍÑ…Ñ”°É••¹ĞÍÕ•ÍÍ™Õ°µ•…¸±…Ñ•¹ä°É••¹ĞÍÕ•ÍÌÉ…Ñ”°Í…µÁ±”Í¥é”ğ)ğáÁ±…¹…Ñ¥½¸ğ±°…¹‘¥‘…Ñ•Ì°É•©•Ñ¥½¹Ì°Í•±•Ñ•…¹‘¥‘…Ñ”°Í½É”½µÁ½¹•¹ÑÌ°É•…Í½¸°™…±±‰…¬½É‘•È°Ñ¥µ”ğ((ğ½‘•Ñ…¥±Ìø((ñ‘•Ñ…¥±Ìø(ñÍÕµµ…ÉäøñÍÑÉ½¹œùI•±¥…‰¥±¥Ñä…¹½‰Í•ÉÙ…‰¥±¥Ñäğ½ÍÑÉ½¹œøğ½ÍÕµµ…Éäø()ğÉ•„ğMÁ•¥™¥…Ñ¥½¸ğ)ğ€´´´ğ€´´´ğ)ğ…¥±ÕÉ”Ñ…á½¹½µäğ€ÄÌ…Ñ•½É¥•Ì¥¹±Õ‘¥¹œ±¥•¹Ğ…¹•±±…Ñ¥½¸ğ)ğI•ÑÉäÁ½±¥äğA•È…Ñ•½ÉäìÉ•ÑÉå…‰±”…Ñ•½É¥•Ì…±±½Ü…Ğµ½ÍĞ½¹”Í…µ”µÑ…É•ĞÉ•ÑÉäğ)ğ…±±‰…¬ğ=É‘•É•É•µ…¥¹‘•È™É½´Ñ¡”É½ÕÑ¥¹œ‘•¥Í¥½¸ì‰±½­•™½È¥¹Ù…±¥É•ÅÕ•ÍĞ°Í…™•ÑäÉ•™ÕÍ…°°ÅÕ½Ñ„°…¹•±±…Ñ¥½¸ğ)ğ	½Õ¹‘ÌğA½±¥äµ…à…ÑÑ•µÁÑÌ€ÇŠLÙ€ìÁ•Èµ…ÑÑ•µÁĞÑ¥µ•½ÕĞ€ÇŠLÄÈÀÍ€ìÑ½Ñ…°Ñ¥µ•½ÕĞ€ÇŠLÌÀÀÍ€ğ)ğ	…­½™˜ğáÁ½¹•¹Ñ¥…°•¥±¥¹œİ¥Ñ ™Õ±°©¥ÑÑ•ÈìÁÉ½Ù¥‘•ÈÉ•ÑÉå™Ñ•É5Í€Ñ…­•ÌÁÉ••‘•¹”ğ)ğQÉ…”ğ=É‘•É•±¥™•å±”ÍÑ…•ÌÁ±ÕÌÉ•ÅÕ•ÍĞ…¹…ÑÑ•µÁĞÉ½İÌğ)ğ5•ÑÉ¥ÌğMÑ…ÑÕÌ°™…±±‰…¬°…Ù•É…”½@ÔÀ½@äÔ±…Ñ•¹ä°Ñ½­•¹Ì°•ÍÑ¥µ…Ñ•½ÍĞ°µ½‘•°½ÁÉ½Ù¥‘•È½…ÁÁ±¥…Ñ¥½¸½•ÉÉ½È‘¥ÍÑÉ¥‰ÕÑ¥½¹Ìğ)ğUÍ…”ğAÉ½Ù¥‘•ÈÕÍ…”ÁÉ•™•ÉÉ•ì¡•ÕÉ¥ÍÑ¥Œ•ÍÑ¥µ…Ñ”ÕÍ•İ¡•¸…‰Í•¹ĞìÍÕ•ÍÍ™Õ°…ÑÑ•µÁĞ¥Ì‰¥±±…‰±”¥¸Ñ¡”…Ñ•İ…äµ½‘•°ğ((ğ½‘•Ñ…¥±Ìø((ñ‘•Ñ…¥±Ìø(ñÍÕµµ…ÉäøñÍÑÉ½¹œùM•ÕÉ¥Ñä…¹‘…Ñ„ğ½ÍÑÉ½¹œøğ½ÍÕµµ…Éäø()ğÉ•„ğMÁ•¥™¥…Ñ¥½¸ğ)ğ€´´´ğ€´´´ğ)ğA…ÍÍİ½É‘ÌğÍÉåÁĞ°Í…±Ñ•°•µ‰•‘‘•Á…É…µ•Ñ•ÉÌ°Ñ¥µ¥¹œµÍ…™”Ù•É¥™¥…Ñ¥½¸ğ)ğM•ÍÍ¥½¹Ìğ…Ñ…‰…Í”µ‰…­•½Á…ÅÕ”Ñ½­•¸°M!´ÈÔØÍÑ½É•°Í•Ù•¸µ‘…ä¡ÑÑÁ=¹±å€½½­¥”ğ)ğY¥ÉÑÕ…°­•åÌğM!´ÈÔØÍÑ½É•°½¹”µÑ¥µ”Á±…¥¹Ñ•áĞ°Í½Á•Ì°•áÁ¥Éä°É•Ù½…Ñ¥½¸°…ÁÀ½•¹Ù¥É½¹µ•¹Ğ‰¥¹‘¥¹œğ)ğAÉ½Ù¥‘•ÈÉ•‘•¹Ñ¥…±ÌğL´ÈÔØµ4İ¥Ñ É…¹‘½´€ÄÈµ‰åÑ”%X…¹…ÕÑ¡•¹Ñ¥…Ñ¥½¸Ñ…œğ)ğQ•¹…¹Ğ¥Í½±…Ñ¥½¸ğ%¹‘•á•İ½É­ÍÁ…•%‘€½İ¹•ÉÍ¡¥À…¹Í•ÉÙ•ÈµÉ•Í½±Ù•Í½Á”ğ)ğI	ğ¥Ù”É½±•Ì…¹É…¹Õ±…ÈÍ•ÉÙ•ÈµÍ¥‘”Á•Éµ¥ÍÍ¥½¹Ìğ)ğ•™…Õ±ĞÉ•Ñ•¹Ñ¥½¸ğ5•Ñ…‘…Ñ„µ½¹±äÉ•ÅÕ•ÍĞ±½¥¹œÁ…Ñ ğ)ğÕ‘¥ĞğI•‘…Ñ•)M=8Í¹…ÁÍ¡½ÑÌì¹¼ÕÁ‘…Ñ”½‘•±•Ñ”¡•±Á•È¥¸Ñ¡”…ÁÁ±¥…Ñ¥½¸µ½‘Õ±”ğ)ğ…Ñ…‰…Í”ğA½ÍÑÉ•ME0€ÄØìAÉ¥Íµ„€Üİ¥Ñ Ñ¡”Á€‘É¥Ù•È…‘…ÁÑ•Èì€ÈÔÍ¡•µ„µ½‘•±Ìğ)ğ)M=8ÕÍ…”ğY…É¥…‰±”Á½±¥ä°ÑÉ…”°•áÁ±…¹…Ñ¥½¸°ÁÉ½µÁĞÑ•ÍĞ°…¹…Õ‘¥ĞÍÑÉÕÑÕÉ•Ì½¹±äğ((ğ½‘•Ñ…¥±Ìø((ñ‘•Ñ…¥±Ìø(ñÍÕµµ…ÉäøñÍÑÉ½¹œùMÑ…¬ğ½ÍÑÉ½¹œøğ½ÍÕµµ…Éäø()ğ1…å•ÈğY•É¥™¥•¡½¥”ğ)ğ€´´´ğ€´´´ğ)ğÉ…µ•İ½É¬ğ9•áĞ¹©Ì€ÄØ¸È¸ÄÉ€°ÁÀI½ÕÑ•È°9½‘”¹©ÌÉ½ÕÑ”ÉÕ¹Ñ¥µ”ğ)ğU$ğI•…Ğ€Ää¸È¸á€°Q…¥±İ¥¹ML€Ğ¸Ì¸Í€°I•¡…ÉÑÌ°1Õ¥‘”ğ)ğ1…¹Õ…”ğQåÁ•MÉ¥ÁĞ€Ø¸À¸Í€°ÍÑÉ¥Ñ€°¹½U¹¡•­•‘%¹‘•á•‘•ÍÍ€°¹½%µÁ±¥¥Ñ=Ù•ÉÉ¥‘•€ğ)ğY…±¥‘…Ñ¥½¸ği½€Ğ¸Ğ¸Í€ğ)ğ…Ñ„ğA½ÍÑÉ•ME0€ÄØ°AÉ¥Íµ„€Ü¸ä¸Å€°ÁÉ¥Íµ„½…‘…ÁÑ•ÈµÁ€ğ)ğQ•ÍÑÌğY¥Ñ•ÍĞ€Ğ¸Ä¸ÄÁ€ìA±…åİÉ¥¡Ğ€Ä¸ØÈ¸Å€¥ÌÁÉ•Í•¹Ğ…Ì„‘•Ù•±½Áµ•¹Ğ‘•Á•¹‘•¹äğ)ğ$ğ¥Ñ!ÕˆÑ¥½¹Ì½¸9½‘”¹©Ì€ÈÈİ¥Ñ A½ÍÑÉ•ME0€ÄØÍ•ÉÙ¥”ğ)ğ½Õµ•¹Ñ•‘•Á±½åµ•¹ĞğY•É•°…ÁÁ±¥…Ñ¥½¸€¬MÕÁ…‰…Í”A½ÍÑÉ•ME0ğ((ğ½‘•Ñ…¥±Ìø((ŒŒQ•ÍÑ¥¹œ()Q¡”ÕÉÉ•¹ĞÑ•ÍĞ™¥±•Ì‘•±…É”€¨¨ÄÈĞÑ•ÍĞ…Í•Ì¨¨è()ğMÕ¥Ñ”ğ½Õ¹Ğğ%µÁ½ÉÑ…¹Ğ¥¹Ù…É¥…¹ÑÌ•á•É¥Í•ğ)ğ€´´´ğ€´´´èğ€´´´ğ)ğU¹¥Ğğ€àÜğ±¥¥‰¥±¥Ñä…¹…±°•¥¡ĞÍÑÉ…Ñ•¥•Ìì½µÁ±•Ñ”…¹‘¥‘…Ñ”…½Õ¹Ñ¥¹œì‰½Õ¹‘•™…±±‰…¬ì±…ÍÍ¥™¥…Ñ¥½¸ì©¥ÑÑ•ÈìÑ½­•¸½½ÍĞµ…Ñ ì•¹ÉåÁÑ¥½¸ìÁ…ÍÍİ½É‘ÌìÙ¥ÉÑÕ…°­•åÌìI	ìÉ•‘…Ñ¥½¸ğ)ğ%¹Ñ•É…Ñ¥½¸ğ€ÄĞğ…Ñ•İ…äÁ•ÉÍ¥ÍÑ•¹”ìÉ½ÕÑ”•áÁ±…¹…Ñ¥½¸…¹ÑÉ…”ì‘•Ñ•Éµ¥¹¥ÍÑ¥Œ‘•µ¼½ÕÑÁÕĞìµ•Ñ…‘…Ñ„µ½¹±ä±½¥¹œìÉ•ÑÉä½™…±±‰…¬ìÍ…™•ÑäÉ•™ÕÍ…°ìÕÍ…”É½±±ÕÀìÅÕ½Ñ„É•©•Ñ¥½¸½İ…É¹¥¹œğ)ğM•ÕÉ¥Ñäğ€ÈÌğ]½É­ÍÁ…”¥Í½±…Ñ¥½¸ìÍ½Á•Á½±¥ä½…ÁÁ±¥…Ñ¥½¸±½½­ÕÀì­•ä¥¹‘¥ÍÑ¥¹Õ¥Í¡…‰¥±¥Ñäì¥Á¡•ÉÑ•áĞÍÑ½É…”ìÉ•ÅÕ•ÍĞ‰½Õ¹‘ÌìÁÉ½µÁĞÑ•áĞ…¹¹½Ğ…±Ñ•ÈÉ½ÕÑ¥¹œìÍ…™”•ÉÉ½ÉÌğ()Q¡”Í••Ù•É¥™¥•È…‘‘Ì€¨¨Äà¹…µ•¡•­Ì¨¨½Ù•É¥¹œ…½Õ¹ÑÌ°…ÁÁ±¥…Ñ¥½¹Ì°Á½±¥¥•Ì°‘•µ¼µ½‘•±Ì°Ù¥ÉÑÕ…°­•åÌ°ÅÕ½Ñ…Ì°ÁÉ½µÁÑÌ°Í••‘•É•ÅÕ•ÍÑÌ°™…±±‰…¬°Ñ•Éµ¥¹…°™…¥±ÕÉ”°É½ÕÑ”•Ù¥‘•¹”°…ÑÑ•µÁÑÌ°Í…™•ÑäÉ•™ÕÍ…°°…¹µ•Ñ…‘…Ñ„µ½¹±ä±½¥¹œ¸()‰…Í )¹Á´ÉÕ¸Ñ•ÍĞ€€€€€€€€€€€€€€Œ€àÜÕ¹¥ĞÑ•ÍÑÌ)¹Á´ÉÕ¸Ñ•ÍĞé¥¹Ñ•É…Ñ¥½¸€€Œ€ÄĞ¥¹Ñ•É…Ñ¥½¸Ñ•ÍÑÌìA½ÍÑÉ•ME0É•ÅÕ¥É•)¹Á´ÉÕ¸Ñ•ÍĞéÍ•ÕÉ¥Ñä€€€€€Œ€ÈÌÍ•ÕÉ¥ÑäÑ•ÍÑÌìA½ÍÑÉ•ME0É•ÅÕ¥É•)¹Á´ÉÕ¸‘•µ¼éÙ•É¥™ä€€€€€€€Œ€ÄàÍ••‘•µ‘•µ¼¡•­Ì)¹Á´ÉÕ¸Ù•É¥™ä€€€€€€€€€€€€Œ™½Éµ…Ğ€¬±¥¹Ğ€¬ÑåÁ•Ì€¬Õ¹¥Ğ€¬ÁÉ½‘ÕÑ¥½¸‰Õ¥±)€()$…‘‘¥Ñ¥½¹…±±ä•¹•É…Ñ•ÌAÉ¥Íµ„°…ÁÁ±¥•Ìµ¥É…Ñ¥½¹Ì°ÉÕ¹Ì…±°Ñ¡É•”Ñ•ÍĞÁÉ½©•ÑÌ°Í••‘Ì…¹Ù•É¥™¥•ÌÑ¡”‘•µ½¹ÍÑÉ…Ñ¥½¸°…¹É•…Ñ•Ì„ÁÉ½‘ÕÑ¥½¸‰Õ¥±……¥¹ÍĞ…¸•Á¡•µ•É…°A½ÍÑÉ•ME0€ÄØÍ•ÉÙ¥”¸((ŒŒ•Á±½åµ•¹Ğ…É¡¥Ñ•ÑÕÉ”()Q¡”É•Á½Í¥Ñ½Éä‘½Õµ•¹ÑÌÑ¡¥ÌÉ•±•…Í”Á…Ñ è()Ñ•áĞ)¥Ñ!Õˆ+ŠRsŠR ¥Ñ!ÕˆÑ¥½¹ÌƒŠH9½‘”¹©Ì€ÈÈƒŠHA½ÍÑÉ•ME0€ÄØÍ•ÉÙ¥”ƒŠHÙ•É¥™ä€¬‘•µ¼¡•¬€¬‰Õ¥±+ŠRSŠR Y•É•°€€€€€€€€ƒŠH9•áĞ¹©Ì…ÁÁ±¥…Ñ¥½¸ƒŠHÁ½½±•Q	M}UI0(€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ƒŠRSŠR MÕÁ…‰…Í”A½ÍÑÉ•ME0(€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ƒŠRSŠR ‘¥É•Ğ%IQ}UI0™½Èµ¥É…Ñ¥½¹Ì)€()IÕ¹Ñ¥µ”ÕÍ•ÌÑ¡”Á½½±•‘…Ñ…‰…Í”½¹¹•Ñ¥½¸ìAÉ¥Íµ„5¥É…Ñ”ÕÍ•ÌÑ¡”‘¥É•Ğ½¹¹•Ñ¥½¸‰•…ÕÍ”0µÕÍĞ‰åÁ…ÍÌÑ¡”Á½½±•È¸…Í¡‰½…ÉÉ½ÕÑ•Ì…É”‘å¹…µ¥Œ‰•…ÕÍ”Ñ¡•äÉ•…±¥Ù”İ½É­ÍÁ…”‘…Ñ„¸Q¡”‘•µ¼Í••¥Ì•áÁ±¥¥Ğ°É•™ÕÍ•ÌÑ¼ÉÕ¸İ¡•¸5=}5=õ™…±Í•€°…¹¥Ì¹•Ù•ÈÁ…ÉĞ½˜•Ù•Éä‰Õ¥±¸()M•”m•Á±½åµ•¹Ñt¡‘½Ì½A1=e59P¹µ¤™½È•¹Ù¥É½¹µ•¹ĞÍ•ÑÕÀ…¹½Á•É…Ñ¥¹œ¡•­Ì¸((ŒŒI•Á½Í¥Ñ½ÉäÍÑÉÕÑÕÉ”()Ñ•áĞ)=µ¹¥I½ÕÑ•È¼+ŠRsŠRŠR …ÁÀ¼+ŠR€€ƒŠRsŠRŠR €¡‘…Í¡‰½…É¤½‘…Í¡‰½…É¼€€€€€€€€Œ½Á•É…Ñ½ÈÍÕÉ™…•Ì+ŠR€€ƒŠRsŠRŠR …Á¤½ØÄ½¡…Ğ½½µÁ±•Ñ¥½¹Ì¼€€€€€€ŒÕ¹¥™¥•…¹MM…Ñ•İ…äÉ½ÕÑ•Ì+ŠR€€ƒŠRSŠRŠR ‘•µ¼¼€€€€€€€€€€€€€€€€€€€€€€€€€Œ‘•Ñ•Éµ¥¹¥ÍÑ¥ŒÕ¥‘•İ½É­™±½İÌ+ŠRsŠRŠR ½µÁ½¹•¹ÑÌ¼€€€€€€€€€€€€€€€€€€€€€€€Œ‘…Í¡‰½…É…¹‘•Í¥¸µÍåÍÑ•´½µÁ½¹•¹ÑÌ+ŠRsŠRŠR ±¥ˆ¼+ŠR€€ƒŠRsŠRŠR …¤¼+ŠR€€ƒŠR€€ƒŠRsŠRŠR É½ÕÑ¥¹œ¼€€€€€€€€€€€€€€€€€€ŒÁÕÉ”•±¥¥‰¥±¥Ñä…¹É…¹­¥¹œ+ŠR€€ƒŠR€€ƒŠRsŠRŠR ™…±±‰…¬¼€€€€€€€€€€€€€€€€€Œ‰½Õ¹‘•±…ÍÍ¥™¥•É•½Ù•Éä+ŠR€€ƒŠR€€ƒŠRSŠRŠR ÁÉ½Ù¥‘•ÉÌ¼€€€€€€€€€€€€€€€€Œ…‘…ÁÑ•È‰½Õ¹‘…Éä+ŠR€€ƒŠRsŠRŠR …Á¤µ­•åÌ¼€€€€€€€€€€€€€€€€€€€€€ŒÙ¥ÉÑÕ…°µ­•ä•¹•É…Ñ¥½¸…¹…ÕÑ +ŠR€€ƒŠRsŠRŠR …ÕÑ ¼€€€€€€€€€€€€€€€€€€€€€€€€€ŒÍ•ÍÍ¥½¹Ì°Á…ÍÍİ½É‘Ì°Õ…É‘Ì+ŠR€€ƒŠRsŠRŠR ÅÕ½Ñ…Ì¼€€€€€€€€€€€€€€€€€€€€€€€ŒÁÉ”µÁÉ½Ù¥‘•ÈÕÍ…”•Ù…±Õ…Ñ¥½¸+ŠR€€ƒŠRsŠRŠR …¹…±åÑ¥Ì¼€€€€€€€€€€€€€€€€€€€€ŒÁ•ÉÍ¥ÍÑ•½Á•É…Ñ¥½¹…°ÅÕ•É¥•Ì+ŠR€€ƒŠRsŠRŠR …Õ‘¥Ğ¼€€€€€€€€€€€€€€€€€€€€€€€€Œ…ÁÁ•¹µ½¹±äİÉ¥Ñ•Ì…¹É•‘…Ñ¥½¸+ŠR€€ƒŠRSŠRŠR Á•Éµ¥ÍÍ¥½¹Ì¼€€€€€€€€€€€€€€€€€€ŒÉ½±”µÑ¼µÁ•Éµ¥ÍÍ¥½¸Á½±¥ä+ŠRsŠRŠR ÁÉ¥Íµ„¼€€€€€€€€€€€€€€€€€€€€€€€€€€€Œ€ÈÔµµ½‘•°Í¡•µ„°µ¥É…Ñ¥½¸°Í••Í•¹…É¥½Ì+ŠRsŠRŠR Ñ•ÍÑÌ¼€€€€€€€€€€€€€€€€€€€€€€€€€€€€ŒÕ¹¥Ğ°¥¹Ñ•É…Ñ¥½¸°Í•ÕÉ¥Ñä+ŠRsŠRŠR Á½ÉÑ™½±¥¼½ÍÉ••¹Í¡½ÑÌ¼€€€€€€€€€€€€ŒÉ•…°ÁÉ½‘ÕĞ…ÁÑÕÉ•Ì+ŠRSŠRŠR ‘½Ì¼€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Œ…É¡¥Ñ•ÑÕÉ”…¹½Á•É…Ñ¥¹œÉ•™•É•¹•Ì)€((ŒŒ1½…°‘•Ù•±½Áµ•¹Ğ()AÉ•É•ÅÕ¥Í¥Ñ•Ìè9½‘”¹©Ì€ÈÈ°¹Á´°½­•È°…¹¥Ğ¸()‰…Í )¥Ğ±½¹”¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½…ÉÍ±…¹ÙÕéµ…°½5½‘•±Mİ¥Ñ¡å…É¹¥Ğ½µ¹¥É½ÕÑ•È)½µ¹¥É½ÕÑ•È)¹Á´¤()À€¹•¹Ø¹•á…µÁ±”€¹•¹Ø(ŒI•Á±…”UQ!}MIP°9IeAQ%=9}-d°…¹%9QI91}A%}MIP¸(Œ9IeAQ%=9}-dµÕÍĞ‘•½‘”Ñ¼•á…Ñ±ä€ÌÈ‰åÑ•Ì¸()¹Á´ÉÕ¸‘ˆéÕÀ€€€€€€€ŒA½ÍÑÉ•ME0€ÄØ…Ğ±½…±¡½ÍĞèÔĞÌÔ)¹Á´ÉÕ¸‘ˆé‘•Á±½ä€€€Œ…ÁÁ±ä½µµ¥ÑÑ•µ¥É…Ñ¥½¹Ì)¹ÁàÑÍàÁÉ¥Íµ„½Í••½¥¹‘•à¹ÑÌ)¹Á´ÉÕ¸‘•Ø)€()=Á•¸€ñ¡ÑÑÀè¼½±½…±¡½ÍĞèÌÀÀÀø…¹ÕÍ”Ñ¡”Í••‘•‘•µ¼…½Õ¹Ğ¸9¼•áÑ•É¹…°ÁÉ½Ù¥‘•È­•ä¥ÌÉ•ÅÕ¥É•İ¡¥±”5=}5=õÑÉÕ•€¸((ñ‘•Ñ…¥±Ìø(ñÍÕµµ…ÉäøñÍÑÉ½¹œù¹Ù¥É½¹µ•¹ĞÙ…É¥…‰±•Ìğ½ÍÑÉ½¹œøğ½ÍÕµµ…Éäø()ğY…É¥…‰±”ğI•ÅÕ¥É•‰äÕÉÉ•¹ĞÍ•ÑÕÀğAÕÉÁ½Í”ğ)ğ€´´´ğ€´´´èğ€´´´ğ)ğQ	M}UI1€ğe•ÌğIÕ¹Ñ¥µ”A½ÍÑÉ•ME0½¹¹•Ñ¥½¸ìÁ½½±•¥¸Ñ¡”‘½Õµ•¹Ñ•Í•ÉÙ•É±•ÍÌ‘•Á±½åµ•¹Ğğ)ğ%IQ}UI1€ğe•Ìğ¥É•Ğ½¹¹•Ñ¥½¸ÕÍ•‰äAÉ¥Íµ„5¥É…Ñ”ğ)ğUQ!}MIQ€ğe•Ìğ5¥¹¥µÕ´€ÌÈµ¡…É…Ñ•ÈÍ•ÉÙ•ÈÍ•É•ĞÕÍ•Ñ¼Í…±Ğ%@½ÉÉ•±…Ñ¥½¸¡…Í¡•Ìğ)ğ9IeAQ%=9}-e€ğe•Ìğ	…Í”ØĞÙ…±Õ”‘•½‘¥¹œÑ¼•á…Ñ±ä€ÌÈ‰åÑ•Ì™½ÈL´ÈÔØµ4ğ)ğ%9QI91}A%}MIQ€ğQ•µÁ±…Ñ”ğ5…¥¹Ñ•¹…¹”•¹‘Á½¥¹ĞÍ•É•Ğğ)ğAA}UI1€ğQ•µÁ±…Ñ”ğÁÁ±¥…Ñ¥½¸½É¥¥¸ì±½…°‘•™…Õ±Ğ¥ÌÁ½ÉĞ€ÌÀÀÀğ)ğ5=}5=€ğ•µ¼½¹±äğ¹…‰±•Ì‘•Ñ•Éµ¥¹¥ÍÑ¥ŒÁÉ½Ù¥‘•È°Í••°…¹‘•µ¼…½Õ¹ÑÌğ)ğ9aQ}AU	1%}5=}5=€ğ•µ¼U$ğáÁ½Í•Ì‘•µ¼µµ½‘”ÁÉ•Í•¹Ñ…Ñ¥½¸ÍÑ…Ñ”ğ)ğ5=}AMM]=I€ğM••ğA…ÍÍİ½É…ÍÍ¥¹•Ñ¼™¥Ñ¥½¹…°‘•µ¼…½Õ¹ÑÌğ)ğ=A9%}A%}-e€ğ=ÁÑ¥½¹…°ğ¹Ù¥É½¹µ•¹Ğ™…±±‰…¬™½È=Á•¹$½¹¹•Ñ¥½¸ğ)ğ9Q!I=A%}A%}-e€ğ=ÁÑ¥½¹…°ğ¹Ù¥É½¹µ•¹Ğ™…±±‰…¬™½È¹Ñ¡É½Á¥Œ½¹¹•Ñ¥½¸ğ)ğ5%9%}A%}-e€ğ=ÁÑ¥½¹…°ğ¹Ù¥É½¹µ•¹Ğ™…±±‰…¬™½È•µ¥¹¤½¹¹•Ñ¥½¸ğ)ğ=A9I=UQI}A%}-e€ğ=ÁÑ¥½¹…°ğ¹Ù¥É½¹µ•¹Ğ™…±±‰…¬™½È=Á•¹I½ÕÑ•È½¹¹•Ñ¥½¸ğ)ğAM-}A%}-e€ğ=ÁÑ¥½¹…°ğ¹Ù¥É½¹µ•¹Ğ™…±±‰…¬™½È••ÁM••¬½¹¹•Ñ¥½¸ğ)ğ=115}	M}UI1€ğ=ÁÑ¥½¹…°ğM•±˜µ¡½ÍÑ•=±±…µ„•¹‘Á½¥¹Ğğ((ğ½‘•Ñ…¥±Ìø((ŒŒ•Í¥¸ÁÉ¥¹¥Á±•Ì((Ä¸€¨©5½‘•°Í•±•Ñ¥½¸¥ÌÁ½±¥ä°¹½Ğ…ÁÁ±¥…Ñ¥½¸±½¥Œ¸¨¨…±±•ÉÌ‘•ÍÉ¥‰”„İ½É­±½…ì½Á•É…Ñ½ÉÌ½İ¸Ñ¡”É½ÕÑ¥¹œ‘•¥Í¥½¸¸(È¸€¨©±¥¥‰¥±¥ÑäÁÉ••‘•Ì½ÁÑ¥µ¥é…Ñ¥½¸¸¨¨¸¥¹…Á…‰±”½ÈÁÉ½¡¥‰¥Ñ•…¹‘¥‘…Ñ”…¹¹½Ğİ¥¸‰äÍ½É¥¹œİ•±°•±Í•İ¡•É”¸(Ì¸€¨©Ù•Éä‘•¥Í¥½¸Í¡½Õ±‰”•áÁ±…¥¹…‰±”¸¨¨M•±•Ñ•°É•©•Ñ•°…¹±½İ•ÈµÉ…¹­•…¹‘¥‘…Ñ•Ì…±°±•…Ù”•Ù¥‘•¹”¸(Ğ¸€¨©…¥±ÕÉ”¥Ì±…ÍÍ¥™¥•‰•™½É”É•…Ñ¥½¸¸¨¨I•ÑÉä…¹™…±±‰…¬‘•Á•¹½¸Í•µ…¹Ñ¥Ì°¹½Ğ„‰±…¹­•Ğ±½½À¸(Ô¸€¨©I•½Ù•Éä¥Ì‰½Õ¹‘•¸¨¨ÑÑ•µÁĞ½Õ¹Ğ°Á•Èµ…ÑÑ•µÁĞÑ¥µ•½ÕĞ°Ñ½Ñ…°Ñ¥µ•½ÕĞ°…¹…¹•±±…Ñ¥½¸…±°Ñ•Éµ¥¹…Ñ”İ½É¬¸(Ø¸€¨©…±±‰…¬‘½•Ì¹½Ğ‰åÁ…ÍÌÍ…™•Ñä‘•¥Í¥½¹Ì¸¨¨MQe}IUM1€ÍÑ½ÁÌ‰ä‘•™…Õ±Ğ¸(Ü¸€¨©Q•¹…¹ĞÍ½Á”½µ•Ì™É½´…ÕÑ¡•¹Ñ¥…Ñ•½¹Ñ•áĞ¸¨¨A…å±½…™¥•±‘Ì…¹¹½ĞÍ•±•Ğ…¹½Ñ¡•Èİ½É­ÍÁ…”¸(à¸€¨©AÉ½Ù¥‘•È‘¥™™•É•¹•ÌÍÑ½À…Ğ…‘…ÁÑ•È‰½Õ¹‘…É¥•Ì¸¨¨I½ÕÑ¥¹œ°ÑÉ…¥¹œ°½ÍĞ°…¹…¹…±åÑ¥Ì½¹ÍÕµ”¹½Éµ…±¥é•½¹ÑÉ…ÑÌ¸(ä¸€¨©•µ½¹ÍÑÉ…Ñ¥½¸…¹A$Í¡…É”Ñ¡”…Ñ•İ…ä¸¨¨I•ÁÉ½‘Õ¥‰¥±¥Ñä½µ•Ì™É½´Ñ¡”ÁÉ½Ù¥‘•È°¹½Ğ„Á…É…±±•°…ÁÁ±¥…Ñ¥½¸Á…Ñ ¸(ÄÀ¸€¨©=Á•É…Ñ¥½¹…°•Ù•¹ÑÌ‰•½µ”ÅÕ•Éå…‰±”É•½É‘Ì¸¨¨áÁ±…¹…Ñ¥½¹Ì…¹…ÑÑ•µÁÑÌÍÕÉÙ¥Ù”‰•å½¹ÑÉ…¹Í¥•¹Ğ±½Ì¸((ŒŒ½Õµ•¹Ñ…Ñ¥½¸()ğ½Õµ•¹ĞğAÕÉÁ½Í”ğ)ğ€´´´ğ€´´´ğ)ğmÉ¡¥Ñ•ÑÕÉ•t¡‘½Ì½I!%QQUI¹µ¤ğMåÍÑ•´Ñ½Á½±½ä°±¥™•å±”°™…±±‰…¬°‘…Ñ„°Í•ÕÉ¥Ñä°‘•Á±½åµ•¹Ğğ)ğmA$I•™•É•¹•t¡‘½Ì½A%}II9¹µ¤ğI•ÅÕ•ÍĞ½É•ÍÁ½¹Í”½¹ÑÉ…Ğ°¡•…‘•ÉÌ°¥‘•µÁ½Ñ•¹ä°…¹•ÉÉ½ÉÌğ)ğmI½ÕÑ¥¹œ¹¥¹•t¡‘½Ì½I=UQ%9}9%9¹µ¤ğ±¥¥‰¥±¥Ñä°•¥¡Ğ½É‘•É¥¹œÍÑÉ…Ñ•¥•Ì°…¹Í½É¥¹œÍ•µ…¹Ñ¥Ìğ)ğm…±±‰…¬¹¥¹•t¡‘½Ì½11	-}9%9¹µ¤ğ…¥±ÕÉ”Ñ…á½¹½µä°‰½Õ¹‘••á•ÕÑ½È°‰…­½™˜°…¹Í…™•Ñä‰•¡…Ù¥½Èğ)ğmAÉ½Ù¥‘•È‘…ÁÑ•ÉÍt¡‘½Ì½AI=Y%I}AQIL¹µ¤ğ‘…ÁÑ•È¥¹Ñ•É™…”…¹Í•Ù•¸É•¥ÍÑ•É•ÁÉ½Ù¥‘•ÉÌğ)ğm…Ñ…‰…Í”•Í¥¹t¡‘½Ì½Q	M}M%8¹µ¤ğI•±…Ñ¥½¹…°½İ¹•ÉÍ¡¥À°¥¹‘•á•Ì°)M=9‰½Õ¹‘…É¥•Ì°…¹…É•…Ñ•Ìğ)ğmM•ÕÉ¥Ñä5½‘•±t¡‘½Ì½MUI%Qe}5=0¹µ¤ğÕÑ¡•¹Ñ¥…Ñ¥½¸°•¹ÉåÁÑ¥½¸°¥Í½±…Ñ¥½¸°…ÕÑ¡½É¥é…Ñ¥½¸°…¹É•‘…Ñ¥½¸ğ)ğmQ¡É•…Ğ5½‘•±t¡‘½Ì½Q!IQ}5=0¹µ¤ğÍÍ•ÑÌ°…‘Ù•ÉÍ…É¥•Ì°µ¥Ñ¥…Ñ¥½¹Ì°…¹…•ÁÑ•É¥Í¬ğ)ğmAÉ¥Ù…ä5½‘•±t¡‘½Ì½AI%Ye}5=0¹µ¤ğ5•Ñ…‘…Ñ„É•Ñ•¹Ñ¥½¸°Í•É•ĞÍÑ½É…”°…¹‘•±•Ñ¥½¸‰•¡…Ù¥½Èğ)ğm•¥Í¥½¹Ít¡‘½Ì½%M%=9L¹µ¤ğÉ¡¥Ñ•ÑÕÉ…°¡½¥•Ì…¹Ñ¡•¥ÈÑÉ…‘”µ½™™Ìğ)ğmQ•ÍĞA±…¹t¡‘½Ì½QMQ}A18¹µ¤ğMÕ¥Ñ”‰½Õ¹‘…É¥•Ì…¹¡¥ µÙ…±Õ”¥¹Ù…É¥…¹ÑÌğ)ğm•Á±½åµ•¹Ñt¡‘½Ì½A1=e59P¹µ¤ğY•É•°°MÕÁ…‰…Í”°µ¥É…Ñ¥½¹Ì°Í••°…¹½Á•É…Ñ¥¹œ¡•­Ìğ((ŒŒ1¥•¹Í”…¹…ÕÑ¡½È()m5%Qt¡1%9M¤ƒ
-Ü	Õ¥±Ğ‰ä€¨©ÉÍ±…¸YÕéµ…°1½¹”¨¨
+`evaluateRoute` is pure and synchronous. Database reads and rolling signals happen before the call; health, recent mean latency, recent success rate, sample size, and projected request cost are injected as candidate data. This makes selection deterministic under controlled inputs and independently unit-testable.
+
+### Balanced scoring
+
+`BALANCED` normalizes each factor to `[0,1]`, multiplies it by the configured weight, and stores every contribution. Defaults are:
+
+| Factor | Default weight | Higher score means |
+| --- | ---: | --- |
+| Health | `0.25` | Better current health state |
+| Recent success rate | `0.25` | Larger success share |
+| Recent latency | `0.20` | Lower measured mean latency |
+| Projected cost | `0.20` | Lower request-specific estimate |
+| Operator preference | `0.10` | Lower configured priority number |
+
+Missing success history is neutral (`0.5`); a candidate with no latency samples ranks behind measured candidates in latency-first routing. The score expresses configured preferenceâ€”it does not claim to identify an objectively best model.
+
+## Routing strategies
+
+<details open>
+<summary><strong>Eight implemented strategies</strong></summary>
+
+| Strategy | Optimizes for | Inputs and behavior | Determinism |
+| --- | --- | --- | --- |
+| `MANUAL` | Explicit model selection | Pins `requestedModelId`; shared eligibility rules still apply. | Deterministic |
+| `PRIORITY` | Operator order | Lowest priority number first; label breaks ties. | Deterministic |
+| `WEIGHTED` | Traffic preference | Weighted random selection without replacement orders both primary and fallback. | Seedable random |
+| `LOWEST_ESTIMATED_COST` | Request cost | Lowest projected cost; priority breaks ties. | Deterministic |
+| `LOWEST_RECENT_LATENCY` | Measured response time | Recent successful mean; models without evidence rank after measured models. | Deterministic |
+| `RELIABILITY_FIRST` | Health and success | Health state, then recent success rate, then priority. | Deterministic |
+| `CAPABILITY_MATCH` | Capacity after eligibility | Largest context window among candidates satisfying every requirement. | Deterministic |
+| `BALANCED` | Weighted trade-off | Health, success, latency, cost, and preference with stored contributions. | Deterministic |
+
+</details>
+
+## Worked routing decision
+
+Consider the seeded **Balanced production** policy. Its verified rules attach `astra-fast` at priority `1`, `astra-pro` at `2`, and `local-ember` at `3`. The following condensed example uses the repository's real demo model definitions and the actual `RouteExplanation` field names:
+
+| Candidate | Catalog facts | Evaluation |
+| --- | --- | --- |
+| `astra-fast` | 32k context; streaming + structured output; lowest non-zero configured price | Eligible and ranked primary for this request |
+| `astra-pro` | 200k context; streaming + structured output + vision + tools | Eligible; retained in fallback order |
+| `local-ember` | 8k context; streaming; zero external charge modeled | Rejected when structured output is required |
+
+```json
+{
+  "policyName": "Balanced production",
+  "strategy": "BALANCED",
+  "selectedCandidate": {
+    "modelId": "<model-definition-id>",
+    "modelLabel": "astra-fast",
+    "providerKind": "DEMO"
+  },
+  "rejectedCandidates": [
+    {
+      "modelId": "<model-definition-id>",
+      "modelLabel": "local-ember",
+      "reason": "missing_capability",
+      "detail": "Does not support required capability: structured_output."
+    },
+    {
+      "modelId": "<model-definition-id>",
+      "modelLabel": "astra-pro",
+      "reason": "not_selected",
+      "detail": "Eligible, but ranked below the selected target. Retained for fallback."
+    }
+  ],
+  "scoreBreakdown": [
+    {
+      "modelLabel": "astra-fast",
+      "score": "<sum of stored contributions>",
+      "components": [
+        { "factor": "health", "raw": 1, "normalised": 1, "weight": 0.25, "contribution": 0.25 }
+      ]
+    }
+  ],
+  "fallbackOrder": ["astra-pro"],
+  "reason": "Astra Fast scored highest against the configured scoring policy. 2 candidates were eligible.",
+  "evaluatedAt": "<ISO-8601 timestamp>"
+}
+```
+
+The numeric placeholders are request-time values, not benchmarks. The important contract is that candidate accounting, component weights, selection reason, and fallback order are stored with the request.
+
+## Failure and fallback engine
+
+**Failure is not equivalent to retry.** An adapter first maps provider behavior into a normalized category. The executor then looks up the category-specific policy.
+
+```mermaid
+flowchart TD
+    A[Attempt target] --> S{Success?}
+    S -->|yes| Return[Return normalized response]
+    S -->|no| Classify[Classify failure]
+    Classify --> Policy{Category policy}
+    Policy -->|retry same + budget| Backoff[Full-jitter backoff]
+    Backoff --> A
+    Policy -->|fallback allowed| Next{Next candidate?}
+    Next -->|yes| A
+    Next -->|no| Stop[Return safe classified error]
+    Policy -->|stop| Stop
+    A -. bounded by .-> Bounds[maxAttempts + totalTimeoutMs + cancellation]
+```
+
+| Failure category | Retry same target | Fallback | Operational reason |
+| --- | ---: | ---: | --- |
+| `AUTHENTICATION` | No | Yes | Repetition cannot repair credentials. |
+| `PERMISSION` | No | Yes | Retrying cannot grant model access. |
+| `RATE_LIMIT` | 1Ã— | Yes | One backed-off retry covers a transient limit. |
+| `TIMEOUT` | 1Ã— | Yes | One retry covers transient slowness without creating an open-ended duplicate risk. |
+| `PROVIDER_UNAVAILABLE` | No | Yes | Move immediately instead of waiting on a reported outage. |
+| `INVALID_REQUEST` | No | No | The request will fail identically elsewhere. |
+| `CONTEXT_LIMIT` | No | Yes | Move only to the ordered chain; content is never silently truncated. |
+| `SAFETY_REFUSAL` | **No** | **No** | The gateway does not shop a refused prompt to another provider. |
+| `MALFORMED_RESPONSE` | 1Ã— | Yes | A schema-invalid response may recover once, then moves on. |
+| `NETWORK` | 1Ã— | Yes | Retry one transient transport fault, then fall back. |
+| `QUOTA_EXCEEDED` | No | No | This is a control-plane rejection, not a provider fault. |
+| `UNKNOWN` | No | Yes | One move without repeating an unclassified condition. |
+| `CLIENT_CANCELLED` | No | No | Stop spending when the caller disconnects. |
+
+Retry delay uses full jitter: a random duration from zero to the exponential ceiling. Every loop consumes an attempt or exits, and execution is independently capped by `maxAttempts` and `totalTimeoutMs`. Routing policy validation bounds those values to `1â€“6` attempts, `1â€“120 s` per attempt, and `1â€“300 s` total.
+
+### A failure story
+
+![OmniRouter fallback trace showing primary timeouts followed by a successful fallback](portfolio/screenshots/07-fallback-trace.png)
+
+```text
+Attempt 1   astra-fast    TIMED_OUT   1,503 ms   Primary target selected by policy
+Attempt 2   astra-fast    TIMED_OUT   1,504 ms   Retry 1 after a retryable failure
+Attempt 3   local-ember   SUCCEEDED     841 ms   Fallback target
+```
+
+These values come from the repository's seeded demo trace. From the application's perspective: one normal completion. From the operator's perspective: two timeouts, the applicable retry rule, a model transition, the successful attempt, and the aggregate cost/latency record.
+
+## Provider abstraction
+
+Seven adapters implement one `ProviderAdapter` contract: model discovery, health check, completion, streaming completion, token estimation, capability checks, and error normalization.
+
+| Provider | Adapter path | Credential | Streaming method | Normalization |
+| --- | --- | --- | --- | --- |
+| Demo | In-process deterministic adapter | None | Deterministic chunks | Fictional models, deterministic content and scoped fault injection |
+| OpenAI | OpenAI-compatible adapter | Bearer key | Provider stream | Choice, usage, finish reason, and HTTP errors |
+| Anthropic | Dedicated Messages adapter | API key | Provider stream | Content blocks, usage, finish reason, and errors |
+| Gemini | Dedicated Generative Language adapter | API key | Buffered word-chunk replay | Candidates, usage, finish reason, and errors |
+| OpenRouter | OpenAI-compatible adapter | Bearer key | Provider stream | Shared OpenAI-compatible envelope |
+| DeepSeek | OpenAI-compatible adapter | Bearer key | Provider stream | Shared OpenAI-compatible envelope |
+| Ollama | OpenAI-compatible local adapter | Base URL; no key required | Provider stream | Shared envelope over a self-hosted endpoint |
+
+```text
+provider-specific request              provider-specific response / error
+            â”‚                                        â”‚
+            â–¼                                        â–¼
+      ProviderAdapter  â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–º normalized response / failure
+```
+
+Credential-backed adapters can resolve an encrypted workspace credential or a provider-specific environment variable. Ollama stores a base URL rather than an API key. The deterministic provider uses the same gateway contract and is explicitly fictional; its cost and latency values are demonstrations, not comparisons with real models.
+
+## Every routing decision leaves evidence
+
+```text
+Request  <correlation-id>
+â”‚
+â”œâ”€ ROUTE
+â”‚  â”œâ”€ policy: Balanced production
+â”‚  â”œâ”€ strategy: BALANCED
+â”‚  â”œâ”€ selected: astra-fast
+â”‚  â”œâ”€ rejected: local-ember â†’ missing_capability
+â”‚  â”œâ”€ lower-ranked: astra-pro â†’ not_selected
+â”‚  â””â”€ fallback: astra-pro
+â”‚
+â”œâ”€ EXECUTION
+â”‚  â”œâ”€ attempt 1 â†’ astra-fast â†’ TIMEOUT
+â”‚  â”œâ”€ attempt 2 â†’ astra-fast â†’ TIMEOUT
+â”‚  â””â”€ attempt 3 â†’ astra-pro  â†’ SUCCEEDED
+â”‚
+â””â”€ RESULT
+   â”œâ”€ status + safe failure category
+   â”œâ”€ input / output / total tokens
+   â”œâ”€ total latency
+   â”œâ”€ estimated cost
+   â””â”€ ordered trace stages
+```
+
+`Request` is the aggregate outcome. `RequestAttempt` is the execution history. Keeping them separate prevents a successful fallback from erasing the failure that made it necessary.
+
+## Usage, cost, and observability
+
+Operators can query:
+
+- total, succeeded, failed, and rejected requests;
+- success and fallback rates;
+- average, P50, and P95 latency for successful requests;
+- input, output, and total tokens;
+- estimated cost from provider-reported or heuristic usage plus workspace-configured prices;
+- request trends and fallback trends by day;
+- attempts by model and provider;
+- request distribution by application; and
+- failures grouped by normalized category.
+
+Percentiles are computed from up to the latest 5,000 successful request rows in the selected window. Model and provider distributions derive from `RequestAttempt`, so failed primary calls and successful fallback calls remain distinguishable. `UsageDaily` maintains an environment-grain rollup through an atomic upsert.
+
+![OmniRouter analytics showing request trends, fallback behavior, estimated cost, and model/provider distributions](portfolio/screenshots/09-usage-analytics.png)
+
+Cost is deliberately named `estimatedCost`: provider-reported usage is preferred, token heuristics are used when usage is absent, and configured per-million prices may differ from a provider invoice.
+
+## Quotas and cost controls
+
+```text
+Authenticated scope â”€â”€â–º current request / token / cost usage
+                                      +
+                              configured quota
+                                      â”‚
+                         â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+                         â–¼                         â–¼
+                      ALLOW/WARN                 REJECT
+                         â”‚                         â”‚
+                      route request         store rejection
+                                             no provider call
+```
+
+Quota records can apply at workspace, application, or environment scope. Supported dimensions are requests, tokens, and estimated cost; windows are `MINUTE`, `DAY`, and `MONTH`. Each dimension may be unlimited, a fractional warning threshold is supported, and the most restrictive matching result wins. Actions are `WARN`, `REJECT`, and `ROUTE_LOWER_COST`; only `REJECT` blocks execution in the current gateway, while the others allow the request and surface quota detail. Routing policies independently enforce `maxEstimatedCost` during candidate eligibility.
+
+## Virtual API keys
+
+```text
+Application
+    â”‚  omr_dev_â€¦ / omr_live_â€¦
+    â–¼
+Virtual OmniRouter key â”€â”€â–º SHA-256 lookup â”€â”€â–º workspace / app / environment scope
+                                                    â”‚
+                                                    â–¼
+Gateway â”€â”€â–º decrypt selected provider credential â”€â”€â–º Provider
+```
+
+- Keys contain an environment segment and 24 URL-safe random characters.
+- Plaintext is returned once at creation; only `keyHash` and a 14-character display prefix are stored.
+- `Authorization: Bearer â€¦` and `x-api-key` are accepted.
+- Empty scopes mean unrestricted; populated scopes are an allowlist. The gateway requires `chat.completions`.
+- Status, expiration, revocation, and last-use time are persisted.
+- The key record binds workspace, application, and environment, so these scopes are not accepted from the body.
+
+Provider credentials are a separate secret class: encrypted at rest with AES-256-GCM and never issued to applications.
+
+## Prompt registry
+
+```text
+Prompt
+â”œâ”€ v1
+â”œâ”€ v2
+â””â”€ v3  â—„â”€â”€ activeVersionId
+```
+
+`PromptVersion` rows carry a monotonically unique version number per prompt, system prompt, user template, declared variables, change note, test cases, and creation time. `Prompt.activeVersionId` moves independently. This structure preserves version history and makes an active prompt selection explicit; it does not imply that every gateway request is automatically linked to a prompt version.
+
+## Security architecture
+
+```mermaid
+flowchart TB
+    subgraph U[Untrusted inputs]
+        Client[Client payload]
+        Presented[Presented keys]
+        Provider[Provider responses]
+    end
+
+    subgraph B[Validation and trust boundary]
+        Size[Body-size bounds]
+        Schema[Zod schemas]
+        Auth[Hash lookup / session lookup]
+        RBAC[Server-side permissions]
+        Tenant[Workspace predicates]
+        Classify[Error classification]
+        Redact[Audit redaction]
+    end
+
+    subgraph T[Trusted control plane]
+        Policies[Policies and models]
+        Secrets[Encrypted credentials]
+        Evidence[Requests and attempts]
+        Audit[Audit log]
+    end
+
+    Client --> Size --> Schema --> Auth --> RBAC --> Tenant --> Policies
+    Presented --> Auth
+    Provider --> Classify --> Evidence
+    Schema --> Secrets
+    RBAC --> Redact --> Audit
+```
+
+| Boundary | Verified control |
+| --- | --- |
+| Passwords | scrypt with `N=16384`, `r=8`, `p=1`, 16-byte salt, 64-byte derived key; parameters embedded in the stored value. |
+| Sessions | 32-byte opaque token in a seven-day `httpOnly`, `sameSite=lax` cookie; SHA-256 stored server-side; revocable; production cookie is `secure`. |
+| Login abuse | Five failed logins lock the account for 15 minutes; the counter is stored on the user record. |
+| Virtual keys | SHA-256 lookup, one-time plaintext, non-authenticating prefix, expiry, revocation, scopes, and tenant binding. |
+| Provider secrets | AES-256-GCM, exactly 32-byte base64 key, random 12-byte IV, authenticated tag, `iv:tag:ciphertext` storage. |
+| Tenant isolation | Server-resolved membership/key context plus `workspaceId` predicates; foreign tenant records use the same not-found behavior. |
+| RBAC | `OWNER`, `ADMIN`, `DEVELOPER`, `ANALYST`, and `VIEWER`; server-side permission checks and role-assignment rank rules. |
+| Request validation | 1 MB declared body bound; 1â€“64 messages; 32,000 characters per message; 200,000 total; bounded model/policy names and generation settings. |
+| Provider errors | Adapter classification and category-safe client messages; raw provider text is not forwarded. |
+| Request content | Workspace default is `METADATA_ONLY`; integration tests assert prompt and response previews remain null on that path. |
+| Audit | Recursive, case-insensitive sensitive-key redaction to depth six; application module exposes create helpers, not update/delete helpers. |
+
+No certification claim is made. The repository documents controls and threat assumptions in [Security Model](docs/SECURITY_MODEL.md), [Threat Model](docs/THREAT_MODEL.md), and [Privacy Model](docs/PRIVACY_MODEL.md).
+
+## Data architecture
+
+The current Prisma schema contains **25 models**. The diagram is deliberately simplified around the ownership and execution relationships rather than reproducing every column.
+
+```mermaid
+erDiagram
+    User ||--o{ Session : owns
+    User ||--o{ WorkspaceMember : joins
+    Workspace ||--o{ WorkspaceMember : has
+    Workspace ||--o{ Invitation : issues
+    Workspace ||--o{ Application : contains
+    Application ||--o{ Environment : separates
+    Workspace ||--o{ ProviderConnection : configures
+    ProviderConnection ||--o{ ModelDefinition : exposes
+    ProviderConnection ||--o{ ProviderHealthCheck : reports
+    Workspace ||--o{ RoutingPolicy : defines
+    RoutingPolicy ||--o{ RoutingRule : orders
+    ModelDefinition ||--o{ RoutingRule : targets
+    Application ||--o{ VirtualAPIKey : issues
+    Environment ||--o{ VirtualAPIKey : binds
+    Workspace ||--o{ Prompt : owns
+    Prompt ||--o{ PromptVersion : versions
+    Workspace ||--o{ Request : records
+    Request ||--o{ RequestAttempt : traces
+    Workspace ||--o{ UsageDaily : aggregates
+    Workspace ||--o{ Quota : constrains
+    Workspace ||--o{ Budget : allocates
+    Workspace ||--o{ AuditLog : audits
+    Workspace ||--o{ DemoScenario : demonstrates
+    Workspace ||--o{ EvaluationSuite : defines
+    EvaluationSuite ||--o{ EvaluationRun : executes
+    ModelDefinition ||--o{ EvaluationRun : evaluates
+    ModelDefinition ||--o{ ModelQualityScore : summarizes
+```
+
+Important persistence decisions:
+
+- Tenant-owned operational tables carry `workspaceId`, keeping isolation to an indexed predicate.
+- `Request` stores the aggregate outcome; `RequestAttempt` stores the ordered execution path.
+- Varying structures use PostgreSQL JSONB: policy requirements/scoring, route explanation, trace stages, prompt test cases, and audit snapshots.
+- Stable identities, ownership, statuses, counters, and relationships remain relational and constrained.
+- `UsageDaily` aggregates by workspace/application/environment/day; per-model analysis uses attempts because every attempt carries the actual model.
+- Audit records are append-only by application construction; direct database access remains outside that application-layer guarantee.
+
+## Product walkthrough
+
+<table>
+  <tr>
+    <td width="50%"><img src="portfolio/screenshots/03-routing-policy-builder.png" alt="OmniRouter routing policy builder" /><br /><strong>Policy builder</strong> â€” configure strategy, attempt/time budgets, and ordered model rules without changing caller code.</td>
+    <td width="50%"><img src="portfolio/screenshots/05-playground.png" alt="OmniRouter gateway playground" /><br /><strong>Gateway playground</strong> â€” execute through the same gateway and deliberately exercise classified demo failures.</td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="portfolio/screenshots/08-request-inspector.png" alt="OmniRouter request inspector" /><br /><strong>Request explorer</strong> â€” filter persisted executions and open the evidence behind an outcome.</td>
+    <td width="50%"><img src="portfolio/screenshots/09-usage-analytics.png" alt="OmniRouter usage analytics" /><br /><strong>Usage analytics</strong> â€” correlate traffic, fallback, latency, token, cost, model, provider, and failure distributions.</td>
+  </tr>
+</table>
+
+The overview screenshot at the top and fallback trace in the reliability section complete the six selected product surfaces; all are existing repository assets rather than manufactured screens.
+
+## API
+
+### Chat completion
+
+```bash
+curl -X POST https://your-deployment.example/api/v1/chat/completions \
+  -H "Authorization: Bearer $OMNIROUTER_KEY" \
+  -H "Content-Type: application/json" \
+  -H "Idempotency-Key: ticket-4821-summary" \
+  -d '{
+    "messages": [
+      { "role": "system", "content": "You are a concise support assistant." },
+      { "role": "user", "content": "Summarize this support thread." }
+    ],
+    "max_tokens": 400,
+    "temperature": 0.2,
+    "policy": "Balanced production"
+  }'
+```
+
+The key may also be supplied as `x-api-key`. `model` pins a model and switches routing to `MANUAL`; `policy` selects an active policy in the authenticated workspace. `response_format` accepts `{ "type": "json_schema", "json_schema": { "schema": { ... } } }`.
+
+```json
+{
+  "id": "ed190580-fd01-44a3-9e46-eb20fe7f435e",
+  "object": "chat.completion",
+  "created": 1787184000,
+  "model": "astra-fast",
+  "choices": [
+    {
+      "index": 0,
+      "message": { "role": "assistant", "content": "â€¦" },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10,
+    "completion_tokens": 63,
+    "total_tokens": 73
+  },
+  "omnirouter": {
+    "correlation_id": "ed190580-fd01-44a3-9e46-eb20fe7f435e",
+    "provider": "DEMO",
+    "fallback_used": false,
+    "attempts": 1,
+    "estimated_cost": 0.000039,
+    "latency_ms": 540,
+    "policy": "Balanced production",
+    "strategy": "BALANCED",
+    "routing_reason": "Astra Fast scored highest against the configured scoring policy."
+  }
+}
+```
+
+Success and post-authentication failure responses carry:
+
+```text
+x-omnirouter-correlation-id: <uuid>
+x-omnirouter-fallback-used:  true | false
+x-omnirouter-attempts:       <count>
+x-omnirouter-quota-warning:  <detail>   # when applicable
+```
+
+These `omnirouter` names are part of the current API contract and are intentionally preserved.
+
+### Streaming
+
+`POST /api/v1/chat/completions/stream` requires `"stream": true` and returns Server-Sent Events. Streaming emits normalized `{ "delta", "done" }` chunks and a terminal event, uses the same key/policy/quota/routing path, persists its execution trace, and does not accept `Idempotency-Key`.
+
+Full contract: [API Reference](docs/API_REFERENCE.md).
+
+## Technical specifications
+
+<details open>
+<summary><strong>Gateway and routing</strong></summary>
+
+| Area | Specification |
+| --- | --- |
+| API style | OpenAI-shaped non-streaming response plus namespaced `omnirouter` routing metadata |
+| Request validation | Zod; 1 MB declared body; explicit array, string, and generation bounds |
+| Authentication | Virtual key through Bearer or `x-api-key`; SHA-256 database lookup |
+| Tenant scope | Workspace/application/environment derived from authenticated context |
+| Idempotency | Optional non-streaming `Idempotency-Key`; at-most-once lookup per workspace; replay `409` |
+| Streaming | Dedicated SSE route at `/api/v1/chat/completions/stream`; idempotency is intentionally rejected on this route |
+| Strategies | Eight: manual, priority, weighted, cost, latency, reliability, capability, balanced |
+| Eligibility | Availability, unavailable health, provider exclusion, capabilities, context, projected-cost ceiling |
+| Live signals | Health state, recent successful mean latency, recent success rate, sample size |
+| Explanation | All candidates, rejections, selected candidate, score components, reason, fallback order, time |
+
+</details>
+
+<details>
+<summary><strong>Reliability and observability</strong></summary>
+
+| Area | Specification |
+| --- | --- |
+| Failure taxonomy | 13 categories including client cancellation |
+| Retry policy | Per category; retryable categories allow at most one same-target retry |
+| Fallback | Ordered remainder from the routing decision; blocked for invalid request, safety refusal, quota, cancellation |
+| Bounds | Policy max attempts `1â€“6`; per-attempt timeout `1â€“120 s`; total timeout `1â€“300 s` |
+| Backoff | Exponential ceiling with full jitter; provider `retryAfterMs` takes precedence |
+| Trace | Ordered lifecycle stages plus request and attempt rows |
+| Metrics | Status, fallback, average/P50/P95 latency, tokens, estimated cost, model/provider/application/error distributions |
+| Usage | Provider usage preferred; heuristic estimate used when absent; successful attempt is billable in the gateway model |
+
+</details>
+
+<details>
+<summary><strong>Security and data</strong></summary>
+
+| Area | Specification |
+| --- | --- |
+| Passwords | scrypt, salted, embedded parameters, timing-safe verification |
+| Sessions | Database-backed opaque token, SHA-256 stored, seven-day `httpOnly` cookie |
+| Virtual keys | SHA-256 stored, one-time plaintext, scopes, expiry, revocation, app/environment binding |
+| Provider credentials | AES-256-GCM with random 12-byte IV and authentication tag |
+| Tenant isolation | Indexed `workspaceId` ownership and server-resolved scope |
+| RBAC | Five roles and granular server-side permissions |
+| Default retention | Metadata-only request logging path |
+| Audit | Redacted JSON snapshots; no update/delete helper in the application module |
+| Database | PostgreSQL 16; Prisma 7 with the `pg` driver adapter; 25 schema models |
+| JSON usage | Variable policy, trace, explanation, prompt test, and audit structures only |
+
+</details>
+
+<details>
+<summary><strong>Stack</strong></summary>
+
+| Layer | Verified choice |
+| --- | --- |
+| Framework | Next.js `16.2.12`, App Router, Node.js route runtime |
+| UI | React `19.2.8`, Tailwind CSS `4.3.3`, Recharts, Lucide |
+| Language | TypeScript `6.0.3`, `strict`, `noUncheckedIndexedAccess`, `noImplicitOverride` |
+| Validation | Zod `4.4.3` |
+| Data | PostgreSQL 16, Prisma `7.9.1`, `@prisma/adapter-pg` |
+| Tests | Vitest `4.1.10`; Playwright `1.62.1` is present as a development dependency |
+| CI | GitHub Actions on Node.js 22 with PostgreSQL 16 service |
+| Documented deployment | Vercel application + Supabase PostgreSQL |
+
+</details>
+
+## Testing
+
+The current test files declare **124 test cases**:
+
+| Suite | Count | Important invariants exercised |
+| --- | ---: | --- |
+| Unit | 87 | Eligibility and all eight strategies; complete candidate accounting; bounded fallback; classification; jitter; token/cost math; encryption; passwords; virtual keys; RBAC; redaction |
+| Integration | 14 | Gateway persistence; route explanation and trace; deterministic demo output; metadata-only logging; retry/fallback; safety refusal; usage rollup; quota rejection/warning |
+| Security | 23 | Workspace isolation; scoped policy/application lookup; key indistinguishability; ciphertext storage; request bounds; prompt text cannot alter routing; safe errors |
+
+The seed verifier adds **18 named checks** covering accounts, applications, policies, demo models, virtual keys, quotas, prompts, seeded requests, fallback, terminal failure, route evidence, attempts, safety refusal, and metadata-only logging.
+
+```bash
+npm run test              # 87 unit tests
+npm run test:integration  # 14 integration tests; PostgreSQL required
+npm run test:security     # 23 security tests; PostgreSQL required
+npm run demo:verify       # 18 seeded-demo checks
+npm run verify            # format + lint + types + unit + production build
+```
+
+CI additionally generates Prisma, applies migrations, runs all three test projects, seeds and verifies the demonstration, and creates a production build against an ephemeral PostgreSQL 16 service.
+
+## Deployment architecture
+
+The repository documents this release path:
+
+```text
+GitHub
+â”œâ”€ GitHub Actions â†’ Node.js 22 â†’ PostgreSQL 16 service â†’ verify + demo check + build
+â””â”€ Vercel         â†’ Next.js application â†’ pooled DATABASE_URL
+                                      â””â”€ Supabase PostgreSQL
+                                         â””â”€ direct DIRECT_URL for migrations
+```
+
+Runtime uses the pooled database connection; Prisma Migrate uses the direct connection because DDL must bypass the pooler. Dashboard routes are dynamic because they read live workspace data. The demo seed is explicit, refuses to run when `DEMO_MODE=false`, and is never part of every build.
+
+See [Deployment](docs/DEPLOYMENT.md) for environment setup and operating checks.
+
+## Repository structure
+
+```text
+OmniRouter/
+â”œâ”€â”€ app/
+â”‚   â”œâ”€â”€ (dashboard)/dashboard/        # operator surfaces
+â”‚   â”œâ”€â”€ api/v1/chat/completions/      # unified and SSE gateway routes
+â”‚   â””â”€â”€ demo/                         # deterministic guided workflows
+â”œâ”€â”€ components/                       # dashboard and design-system components
+â”œâ”€â”€ lib/
+â”‚   â”œâ”€â”€ ai/
+â”‚   â”‚   â”œâ”€â”€ routing/                  # pure eligibility and ranking
+â”‚   â”‚   â”œâ”€â”€ fallback/                 # bounded classified recovery
+â”‚   â”‚   â””â”€â”€ providers/                # adapter boundary
+â”‚   â”œâ”€â”€ api-keys/                     # virtual-key generation and auth
+â”‚   â”œâ”€â”€ auth/                         # sessions, passwords, guards
+â”‚   â”œâ”€â”€ quotas/                       # pre-provider usage evaluation
+â”‚   â”œâ”€â”€ analytics/                    # persisted operational queries
+â”‚   â”œâ”€â”€ audit/                        # append-only writes and redaction
+â”‚   â””â”€â”€ permissions/                  # role-to-permission policy
+â”œâ”€â”€ prisma/                           # 25-model schema, migration, seed scenarios
+â”œâ”€â”€ tests/                            # unit, integration, security
+â”œâ”€â”€ portfolio/screenshots/            # real product captures
+â””â”€â”€ docs/                             # architecture and operating references
+```
+
+## Local development
+
+Prerequisites: Node.js 22, npm, Docker, and Git.
+
+```bash
+git clone https://github.com/arslanvuzmal/ModelSwitchyard.git omnirouter
+cd omnirouter
+npm ci
+
+cp .env.example .env
+# Replace AUTH_SECRET, ENCRYPTION_KEY, and INTERNAL_API_SECRET.
+# ENCRYPTION_KEY must decode to exactly 32 bytes.
+
+npm run db:up       # PostgreSQL 16 at localhost:5435
+npm run db:deploy   # apply committed migrations
+npx tsx prisma/seed/index.ts
+npm run dev
+```
+
+Open <http://localhost:3000> and use the seeded demo account. No external provider key is required while `DEMO_MODE=true`.
+
+<details>
+<summary><strong>Environment variables</strong></summary>
+
+| Variable | Required by current setup | Purpose |
+| --- | ---: | --- |
+| `DATABASE_URL` | Yes | Runtime PostgreSQL connection; pooled in the documented serverless deployment |
+| `DIRECT_URL` | Yes | Direct connection used by Prisma Migrate |
+| `AUTH_SECRET` | Yes | Minimum 32-character server secret used to salt IP correlation hashes |
+| `ENCRYPTION_KEY` | Yes | Base64 value decoding to exactly 32 bytes for AES-256-GCM |
+| `INTERNAL_API_SECRET` | Template | Maintenance endpoint secret |
+| `APP_URL` | Template | Application origin; local default is port 3000 |
+| `DEMO_MODE` | Demo only | Enables deterministic provider, seed, and demo accounts |
+| `NEXT_PUBLIC_DEMO_MODE` | Demo UI | Exposes demo-mode presentation state |
+| `DEMO_PASSWORD` | Seed | Password assigned to fictional demo accounts |
+| `OPENAI_API_KEY` | Optional | Environment fallback for OpenAI connection |
+| `ANTHROPIC_API_KEY` | Optional | Environment fallback for Anthropic connection |
+| `GEMINI_API_KEY` | Optional | Environment fallback for Gemini connection |
+| `OPENROUTER_API_KEY` | Optional | Environment fallback for OpenRouter connection |
+| `DEEPSEEK_API_KEY` | Optional | Environment fallback for DeepSeek connection |
+| `OLLAMA_BASE_URL` | Optional | Self-hosted Ollama endpoint |
+
+</details>
+
+## Design principles
+
+1. **Model selection is policy, not application logic.** Callers describe a workload; operators own the routing decision.
+2. **Eligibility precedes optimization.** An incapable or prohibited candidate cannot win by scoring well elsewhere.
+3. **Every decision should be explainable.** Selected, rejected, and lower-ranked candidates all leave evidence.
+4. **Failure is classified before reaction.** Retry and fallback depend on semantics, not a blanket loop.
+5. **Recovery is bounded.** Attempt count, per-attempt timeout, total timeout, and cancellation all terminate work.
+6. **Fallback does not bypass safety decisions.** `SAFETY_REFUSAL` stops by default.
+7. **Tenant scope comes from authenticated context.** Payload fields cannot select another workspace.
+8. **Provider differences stop at adapter boundaries.** Routing, tracing, cost, and analytics consume normalized contracts.
+9. **Demonstration and API share the gateway.** Reproducibility comes from the provider, not a parallel application path.
+10. **Operational events become queryable records.** Explanations and attempts survive beyond transient logs.
+
+## Documentation
+
+| Document | Purpose |
+| --- | --- |
+| [Architecture](docs/ARCHITECTURE.md) | System topology, lifecycle, fallback, data, security, deployment |
+| [API Reference](docs/API_REFERENCE.md) | Request/response contract, headers, idempotency, and errors |
+| [Routing Engine](docs/ROUTING_ENGINE.md) | Eligibility, eight ordering strategies, and scoring semantics |
+| [Fallback Engine](docs/FALLBACK_ENGINE.md) | Failure taxonomy, bounded executor, backoff, and safety behavior |
+| [Provider Adapters](docs/PROVIDER_ADAPTERS.md) | Adapter interface and seven registered providers |
+| [Database Design](docs/DATABASE_DESIGN.md) | Relational ownership, indexes, JSONB boundaries, and aggregates |
+| [Security Model](docs/SECURITY_MODEL.md) | Authentication, encryption, isolation, authorization, and redaction |
+| [Threat Model](docs/THREAT_MODEL.md) | Assets, adversaries, mitigations, and accepted risk |
+| [Privacy Model](docs/PRIVACY_MODEL.md) | Metadata retention, secret storage, and deletion behavior |
+| [Decisions](docs/DECISIONS.md) | Architectural choices and their trade-offs |
+| [Test Plan](docs/TEST_PLAN.md) | Suite boundaries and high-value invariants |
+| [Deployment](docs/DEPLOYMENT.md) | Vercel, Supabase, migrations, seed, and operating checks |
+
+## License and author
+
+[MIT](LICENSE) Â· Built by **Arslan Vuzmal Lone**
